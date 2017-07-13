@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AAvian's Games and "Games"</title>
+
+    <!--jquery cdn-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+
+    <!--angular cdn-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+    <!--bootstrap cdns-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+    <script src="js/games_data.js"></script>
+    <script src="js/games.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <div class="navbar-brand">artlessavian.github.io</div>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="active">
+                    <a href="#">Produced Games</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container" ng-app="tabStuff" ng-controller="tabController">
+
+<div class="alert alert-info alert-dismissible text-center" role="alert">
+    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span
+            class="sr-only">Close</span></button>
+    <h2>
+        <strong>Warning!</strong> Stuff here is rough, unfinished, and/or boring. Read if you want.
+    </h2>
+</div>
+    
+<div ng-show="entries === null" class="alert alert-warning alert-dismissible ng-hide" role="alert">
+    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span
+            class="sr-only">Close</span></button>
+    <h2>
+        <strong>Oops!</strong> Something is broken here. :(
+    </h2>
+</div>
+
+<!--replace with nav-pill if too big (also in the script down below)-->
+<ul class="nav nav-tabs" id="games-tab">
+    <li role="presentation" class="active"><a href="#home">Main</a></li>
+    <li role="presentation" ng-repeat="entry in entries"><a href="#{{entry.tab}}">{{entry.tab}}</a></li>
+</ul>
+    
+<div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+        <div class="jumbotron text-center">
+            <h1>
+                Writing games is hard.
+            </h1>
+            <p>A large majority of the games listed here are unpolished, unfinished, and have programmer art.<br>
+                That doesn't mean they are useless, though. To me, I learned so much from each project.</p>
+                <!--i think this is a bit corny but eh-->
+        </div>
+        <p>
+            For me, writing games is more about learning programming skills. I have been doing that. In the process,
+            I may have several abandoned projects, which is a shame, but doing so is worth it. <br>
+            If you prefer to see more finished products, check the box.
+            <input type="checkbox" ng-model="hideUnimpressive">
+            <b class="ng-hide" ng-show="hideUnimpressive">:( (also the button doesn't do anything rn)</b>
+        </p>
+    </div>
+    <div ng-repeat="entry in entries" id="{{entry.tab}}" class="tab-pane fade">
+        <h2>{{entry.title}}</h2>
+        
+        <div class="well container">
+            <div class="col-md-4">
+                <img ng-repeat="image in entry.images" class="img-responsive" src="res/games/{{image}}" alt="res/games/{{image}}">
+                <hr>
+            </div>
+            <div class="col-md-8">
+                <div ng-repeat="text in entry.text">
+                    <blockquote>
+                        {{text}}
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+</div>
+
+<hr>
+
+<footer>
+    <div class="container">
+        &copy; 2017 ArtlessAvian
+    </div>
+    
+    <script>     
+        $(document).ready(function(){
+            $(".nav-tabs a").click(function(){
+                $(this).tab('show');
+            });
+        });
+    </script>
+</footer>
+
+</body>
+</html>

@@ -10,7 +10,7 @@
             crossorigin="anonymous"></script>
 
     <!--angular cdn-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
     <!--bootstrap cdns-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -25,7 +25,15 @@
 <nav class="navbar navbar-inverse">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#about">artlessavian.github.io</a>
+            <div class="navbar-brand">artlessavian.github.io</div>
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="games.html">Produced Games</a>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>
@@ -37,7 +45,7 @@
             <div class="jumbotron">
                 <div class="container">
                     <h1>ArtlessAvian</h1>
-                    <h1 class="pull-right">Writes Games</h1>
+                    <h1 class="text-right">Writes Games</h1>
                 </div>
             </div>
 
@@ -53,13 +61,11 @@
             <div class="list-group">
                 <div class="list-group-item active">Directory Links</div>
                 <!--<div class="list-group-item">Fancy Homepage [not working]</div>-->
-                <div class="list-group-item">Produced Games List [not working]</div>
-                <!--<li class = "list-group-item"> Full Stack Development (??) </li>-->
+                <a class="list-group-item" href="games.html">Produced Games List</a>
             </div>
             <div class="list-group">
                 <div class="list-group-item active">External Links</div>
                 <a class="list-group-item" href="https://www.github.com/ArtlessAvian">Github</a>
-                <!--<li class = "list-group-item"> Full Stack Development (??) </li>-->
             </div>
         </div>
     </div>
@@ -93,12 +99,16 @@
                 <!--TODO: Add links to the APIs-->
                 I can work with APIs and frameworks native to Java (LibGDX, Javacord).
                 I have dabbled with threading and full stack development.
-
+            </blockquote>
+            <blockquote>
                 I work in Java for a large majority of projects, using Intellij IDEA.
                 I am working on mastering computer science topics through Java first.
                 Programming languages that I have used are BASIC, Logo, Pascal, Java, Python,
-                Javascript, OCaml, and Haskell.
+                Javascript, OCaml, and Haskell. <br>
                 <!--Also BrainF and Befunge. lol-->
+
+                Also, This page is written by me, using Bootstrap, JQuery, and AngularJS.
+                <!--links!-->
             </blockquote>
             <!--<blockquote> I started programming some time in elementary school. My older brother introduced me to BASIC.-->
                 <!--&lt;!&ndash;TODO: K-8? P-8? what.&ndash;&gt;-->
@@ -126,7 +136,7 @@
                 It served as a way to strengthen skills, learn design, and show tangible results. <!-- TODO: tangible results? -->
             </blockquote>
             <div class="alert alert-info">
-                A list of games, functional or not, can be found <a href="#" class="alert-link">here</a> (when I create it)
+                A list of games, functional or not, can be found <a href="games.html" class="alert-link">here</a> (when I create it)
             </div>
         </div>
 
