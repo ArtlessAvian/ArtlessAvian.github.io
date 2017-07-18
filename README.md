@@ -1,3 +1,3 @@
 [link](http://artlessavian.github.io/)
 
-Uses Bootstrap and JQuery.
+Uses Bootstrap, JQuery, and AngularJS.

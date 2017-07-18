@@ -58,10 +58,11 @@
     </h2>
 </div>
 
-<!--replace with nav-pill if too big (also in the script down below)-->
-<ul class="nav nav-tabs" id="games-tab">
+<ul class="nav nav-pills" id="games-tab">
     <li role="presentation" class="active"><a href="#home">Main</a></li>
-    <li role="presentation" ng-repeat="entry in entries"><a href="#{{entry.tab}}">{{entry.tab}}</a></li>
+    <li role="presentation" ng-repeat="entry in entries" ng-hide="(entry.metaishTag/32 % 2 >= 1) && hideUnimpressive">
+        <a href="#{{entry.tab}}">{{entry.tab}}</a>
+    </li>
 </ul>
     
 <div class="tab-content">
@@ -79,11 +80,12 @@
             I may have several abandoned projects, which is a shame, but doing so is worth it. <br>
             If you prefer to see more finished products, check the box.
             <input type="checkbox" ng-model="hideUnimpressive">
-            <b class="ng-hide" ng-show="hideUnimpressive">:( (also the button doesn't do anything rn)</b>
+            <b class="ng-hide" ng-show="hideUnimpressive">:(</b> <br>
+            Listed projects are roughly in order of creation.
         </p>
     </div>
     <div ng-repeat="entry in entries" id="{{entry.tab}}" class="tab-pane fade">
-        <h2>{{entry.title}}</h2>
+        <h2 class="text-center">{{entry.title}}</h2>
         
         <div class="well container">
             <div class="col-md-4">
@@ -114,7 +116,7 @@
     
     <script>     
         $(document).ready(function(){
-            $(".nav-tabs a").click(function(){
+            $(".nav-pills a").click(function(){
                 $(this).tab('show');
             });
         });
