@@ -19,8 +19,7 @@
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
 
-    <script src="js/games_data.js"></script>
-    <script src="js/games.js"></script>
+    <script src="js/games/games.js"></script>
 </head>
 <body>
 
@@ -88,11 +87,15 @@
         <h2 class="text-center">{{entry.title}}</h2>
         
         <div class="well container">
-            <div class="col-md-4">
+
+            <div class="col-md-4" ng-if="entry.images">
                 <img ng-repeat="image in entry.images" class="img-responsive" src="res/games/{{image}}" alt="res/games/{{image}}">
-                <hr>
             </div>
-            <div class="col-md-8">
+            <div ng-class="{true:'col-md-8', false:'col-md-12'}[entry.images]">
+                <div ng-if="entry.link">
+                    <a ng-href="{{entry.link}}">Link! ({{entry.link}})</a>
+                    <hr>
+                </div>
                 <div ng-repeat="text in entry.text">
                     <blockquote>
                         {{text}}
