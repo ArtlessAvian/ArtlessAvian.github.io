@@ -35,6 +35,14 @@ recurseLoad = function(list, data){
         }
         document.head.appendChild(script);
     }
+    else
+    {
+        $(document).ready(function(){
+            $(".nav-pills a").click(function(){
+                $(this).tab('show');
+            });
+        });
+    }
 }
 recurseLoad(resourceList, gamesData);
 
