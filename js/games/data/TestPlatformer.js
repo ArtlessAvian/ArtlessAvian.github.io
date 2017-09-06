@@ -3,7 +3,7 @@ gamesData.push({
     "title" : "First \"Product\" with LibGDX",
     "metaishTag" : 2 + 4,
     "text" : [
-        "My friend and I had an discussion about D-Pads for mobile games. He was for using them, and I was against. " +
+        "My friend and I had a discussion about D-Pads for mobile games. He was for using them, and I was against. " +
         "I said that they should be replaced with something more suited for touchscreens. So, I wrote a platformer " +
         "around what I would call a virtual joystick. The controls are still bad. The game was only playable by me.",
 
