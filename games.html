@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>AAvian's Games and "Games"</title>
@@ -19,27 +20,15 @@
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
 
+    <script>var app = angular.module('myapp', []);</script>
     <script src="js/games/games.js"></script>
 </head>
-<body>
 
-<nav class="navbar navbar-inverse">
-    <div class="container">
-        <div class="navbar-header">
-            <div class="navbar-brand">artlessavian.github.io</div>
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li class="active">
-                    <a href="#">Produced Games</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<body ng-app="myapp">
 
-<div class="container" ng-app="tabStuff" ng-controller="tabController">
+<navbar-thing></navbar-thing>
+
+<div class="container" ng-controller="tabController">
 
 <div class="alert alert-info alert-dismissible text-center" role="alert">
     <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span
@@ -48,49 +37,41 @@
         <strong>Warning!</strong> Stuff here is rough, unfinished, and/or boring. Read if you want.
     </h2>
 </div>
-    
-<div ng-show="entries === null" class="alert alert-warning alert-dismissible ng-hide" role="alert">
-    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span
-            class="sr-only">Close</span></button>
-    <h2>
-        <strong>Oops!</strong> Something is broken here. :(
-    </h2>
-</div>
 
 <ul class="nav nav-pills" id="games-tab">
     <li role="presentation" class="active"><a href="#home">Main</a></li>
-    <li role="presentation" ng-repeat="entry in entries" ng-hide="(entry.metaishTag/32 % 2 >= 1) && hideUnimpressive">
+    <li role="presentation" ng-repeat="entry in entries">
         <a href="#{{entry.tab}}">{{entry.tab}}</a>
     </li>
 </ul>
-    
+
 <div class="tab-content">
     <div id="home" class="tab-pane fade in active">
         <div class="jumbotron text-center">
             <h1>
-                Writing games is hard.
+                Writing games is pretty hard.
             </h1>
-            <p>A large majority of the games listed here are unpolished, unfinished, and have programmer art.<br>
-                That doesn't mean they are useless, though. To me, I learned so much from each project.</p>
-                <!--i think this is a bit corny but eh-->
+            <h2>
+                Maybe, if I wanted to actually make games, I wouldn't do it from this low level.
+            </h2>
         </div>
         <p>
-            For me, writing games is more about learning programming skills. I have been doing that. In the process,
-            I may have several abandoned projects, which is a shame, but doing so is worth it. <br>
-            If you prefer to see more finished products, check the box.
-            <input type="checkbox" ng-model="hideUnimpressive">
-            <b class="ng-hide" ng-show="hideUnimpressive">:(</b> <br>
+            I kinda do want to make games, but I much prefer getting good at programming.
+            So here's what I've been doing for the last couple years.
             Listed projects are roughly in order of creation.
         </p>
     </div>
-    <div ng-repeat="entry in entries" id="{{entry.tab}}" class="tab-pane fade">
-        <h2 class="text-center">{{entry.title}}</h2>
-        
-        <div class="well container">
 
+    <!--oh wowee look at this hot mess-->
+    <div ng-repeat="entry in entries" id="{{entry.tab}}" class="tab-pane fade">
+
+        <h2 class="text-center">{{entry.title}}</h2>
+
+        <div class="well container">
             <div class="col-md-4" ng-if="entry.images">
                 <img ng-repeat="image in entry.images" class="img-responsive" src="res/games/{{image}}" alt="res/games/{{image}}">
             </div>
+
             <div ng-class="{true:'col-md-8', false:'col-md-12'}[entry.images]">
                 <div ng-if="entry.link">
                     <a ng-href="{{entry.link}}">Link! ({{entry.link}})</a>
@@ -103,6 +84,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 </div>
 
@@ -117,6 +99,16 @@
         &copy; 2017 ArtlessAvian
     </div>
 </footer>
+
+<script>
+    app.directive('navbarThing', function() {
+      return {
+          restrict: 'AE',
+          replace: 'true',
+          templateUrl: 'directives/navbar-thing.html'
+      };
+    });
+</script>
 
 </body>
 </html>

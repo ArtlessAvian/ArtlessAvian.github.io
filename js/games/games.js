@@ -16,7 +16,6 @@ resourceList = [
 
 
 var gamesData = [];
-var app = angular.module("tabStuff", []);
 scope = null;
 app.controller("tabController", function($scope){
     scope = $scope;

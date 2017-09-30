@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>ArtlessAvian Writes Games</title>
+    <title>ArtlessAvian</title>
 
     <!--jquery cdn-->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -19,111 +20,68 @@
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
 
+    <script>var app = angular.module('myapp', []);</script>
+    <script src="js/index/index.js"></script>
 </head>
-<body>
 
-<nav class="navbar navbar-inverse">
-    <div class="container">
-        <div class="navbar-header">
-            <div class="navbar-brand">artlessavian.github.io</div>
-            <ul class="nav navbar-nav">
-                <li class="active">
-                    <a href="#">Home</a>
-                </li>
-                <li>
-                    <a href="games.html">Produced Games</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<body ng-app="myapp">
+
+<navbar-thing></navbar-thing>
+
+<!--add that hipster full screen size video-->
 
 <div class="container">
 
-    <div class="row">
-        <div class="col-md-8">
-            <div class="jumbotron">
-                <div class="container">
-                    <h1>ArtlessAvian</h1>
-                    <h1 class="text-right">Writes Games</h1>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="col-md-4">
-            <div class="list-group">
-                <div class="list-group-item active">Internal Links</div>
-                <a class="list-group-item" href="#programmingSect">Programming</a>
-                <a class="list-group-item" href="#gamedevSect">Game Development</a>
-                <!--<li class = "list-group-item"> Full Stack Development (??) </li>-->
-            </div>
-            <div class="list-group">
-                <div class="list-group-item active">Directory Links</div>
-                <!--<div class="list-group-item">Fancy Homepage [not working]</div>-->
-                <a class="list-group-item" href="games.html">Produced Games List</a>
-            </div>
-            <div class="list-group">
-                <div class="list-group-item active">External Links</div>
-                <a class="list-group-item" href="https://www.github.com/ArtlessAvian">Github</a>
+    <div class="col-md-12">
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="text-center">ArtlessAvian, or Ryan</h1>
+                <h2 class="text-center" id="cool-thing">hey i probably broke the js</h2>
             </div>
         </div>
     </div>
 
-    <div class="container"> <!--Lotsa Words-->
+    <div class="col-md-10 col-md-offset-1"> <!--Lotsa Words-->
 
-        <!--<div>-->
-            <!--<h2>About me</h2>-->
-            <!--<blockquote>-->
-                <!--uhh-->
-            <!--</blockquote>-->
-        <!--</div>-->
+        <h3>
+            Hey, its my website. It's not exactly formal. Iterations ago, it was, and it was stiff and cringy kinda.
+            Hopefully this one isn't.
+        </h3>
 
         <div>
-            <h2>About me</h2>
+            <h2>Summary</h2>
             <blockquote>
-                I am a highschool senior.
+                I am a highschool senior. I play a bit of Super Smash Bros. Melee and do some programming. I
+                try to write and clone some games. I guess that's cool.
             </blockquote>
         </div>
-
         <hr>
-
-        <div id="programmingSect">
-            <h2>Programming</h2>
-            <!--TODO: this is boring and unpolished-->
-            <blockquote> As a baseline, I have taken AP Computer Science A, getting a score of 5 on the exam.
-                In my opinion, I have a lot of experience with algorithms
-                (Time Complexity, Master Method, Designing Greedy Algorithms)
-                and data structures (Types, Usages, Associated Time Complexities).
-                I have some experience in software design (MVC, Observer Pattern, State Pattern), and am currently working to improve it.
-                <!--TODO: Add links to the APIs-->
-                I can work with APIs and frameworks native to Java (LibGDX, Javacord).
-                I have dabbled with threading and full stack development.
-            </blockquote>
+        <div>
+            <h2>More About Me</h2>
             <blockquote>
-                I work in Java for a large majority of projects, using Intellij IDEA.
-                I am working on mastering computer science topics through Java first.
-                Programming languages that I have used are BASIC, Logo, Pascal, Java, Python,
-                Javascript, OCaml, and Haskell. <br>
-                <!--Also BrainF and Befunge. lol-->
-
-                Also, This page is written by me, using Bootstrap, JQuery, and AngularJS.
-                <!--links!-->
+                I probably have a lot of hobbies and interests. At the moment I can't think of any.
             </blockquote>
-            <!--<blockquote> I started programming some time in elementary school. My older brother introduced me to BASIC.-->
-                <!--&lt;!&ndash;TODO: K-8? P-8? what.&ndash;&gt;-->
-                <!--Using BASIC, I was able to make simple programs and "games."-->
-                <!--&lt;!&ndash;I learned up to function declaration (???? seems too shallow).&ndash;&gt;-->
-                <!--In a private K-8 school, which I attended as middle school, I was taught Logo and Pascal in a "Computers" class.-->
-                <!--&lt;!&ndash;In that class, previous experience made the class a bit redundant.&ndash;&gt;-->
-                <!--&lt;!&ndash;TODO: literally bragging :/&ndash;&gt;-->
-                <!--&lt;!&ndash;During middle school, I made more games, like a Pong clone and a tile based platformer.&ndash;&gt;-->
-                <!--In high school, I was introduced to Object Oriented Programming with Java by my older brother, again.-->
-                <!--In sophomore year, I found a framework to write games, and wrote more crude games. I also took an online-->
-                <!--course on algorithms and data structures.-->
-                <!--In junior year, I took AP Computer Science A. In that class, I provided help, solutions, debugging help, and tech support to others.-->
-                <!--For the final, my friends and I wrote a game (final-lethal-league on Github). As of now, it is the most complete game I have produced.-->
-            <!--</blockquote>-->
+        </div>
+        <hr>
+        <div>
+            <h2>Super Smash Bros. Melee</h2>
+            <blockquote>
+                This clearly is important enough to be dedicated its own section. /s <br>
+                For those unfamiliar with the game, you hit other people until they fly off the screen. It generally gets easier
+                to do so as you hit them more.
+                The game is pretty neat and it having a competitive scene is well deserved. Unfortunately I'm not too good
+                at the game. I could be getting better but don't have time to throw around and don't have an ethernet cable to play online.
+                You can find me getting last place along with 1/4 of other players at a high profile tournament.
+                <a href="https://smash.gg/tournament/genesis-3/events/melee-singles/brackets/2618/15750"> here. </a>
+            </blockquote>
+        </div>
+        <hr>
+        <div>
+            <h2>Programming</h2>
+            <blockquote>
+                I used to know Pascal because of school. Now I don't, and prefer Java. I can pick up languages with the help of
+                Google and StackOverflow quickly, but don't because I'd prefer to learn more about algorithms, data structures, and software design principles.
+            </blockquote>
         </div>
 
         <hr>
@@ -131,17 +89,13 @@
         <div id="gamedevSect">
             <h2>Game Development</h2>
             <blockquote>
-                As said in the programming section, I have written numerous games throughout learning Computer Science.
-                It served as a way to strengthen skills, learn design, and show tangible results. <!-- TODO: tangible results? -->
+                Game development is a nice hobby, and a good way to learn programming in general.
+                I've been using it as a learning tool, and so I haven't made anything tangible. I did get close though.
+                I use LibGDX, and just started messing around in Godot.
             </blockquote>
-            <div class="alert alert-info">
-                A list of games, functional or not, can be found <a href="games.html" class="alert-link">here</a>
-            </div>
         </div>
 
     </div> <!--End Lotsa Words-->
-
-    <hr>
 
 </div>
 
@@ -152,7 +106,17 @@
         &copy; 2017 ArtlessAvian
     </div>
 </footer>
+<br>
 
-</div>
+<script>
+    app.directive('navbarThing', function() {
+      return {
+          restrict: 'AE',
+          replace: 'true',
+          templateUrl: 'directives/navbar-thing.html'
+      };
+    });
+</script>
+
 </body>
 </html>
