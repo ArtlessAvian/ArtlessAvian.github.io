@@ -4,8 +4,7 @@ gamesData.push({
     "metaishTag" : 1 + 2 + 32,
     "link" : "https://github.com/ArtlessAvian/highly-unresponsive",
     "text" : [
-        "blah",
         "blah"
     ],
-    "images" : []
+    "images" : null
 });

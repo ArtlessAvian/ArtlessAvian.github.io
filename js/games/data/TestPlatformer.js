@@ -36,10 +36,10 @@ gamesData.push({
         "on my phone, they would have trouble with controls. Also, everyone recommended I added coins."
     ],
     "images" : [
-        "TestPlatformer/Init.PNG",
-        "TestPlatformer/debug_collision.PNG",
-        "TestPlatformer/happy_face.PNG",
-        "TestPlatformer/map.PNG",
-        "TestPlatformer/clones.PNG"
+        "Init.PNG",
+        "debug_collision.PNG",
+        "happy_face.PNG",
+        "map.PNG",
+        "clones.PNG"
     ]
 })

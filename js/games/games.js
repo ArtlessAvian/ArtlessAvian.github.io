@@ -11,7 +11,7 @@ resourceList = [
     "js/games/data/school-blackjack.js",
     "js/games/data/raycast-engine-js.js",
     "js/games/data/highly-unresponsive.js",
-    "js/games/data/final-lethal-league.js",
+    "js/games/data/final-lethal-league.js"
 ];
 
 
@@ -20,6 +20,7 @@ scope = null;
 app.controller("tabController", function($scope){
     scope = $scope;
     $scope.entries = gamesData;
+    recurseLoad(resourceList, gamesData);
 });
 
 recurseLoad = function(list, data){
@@ -43,7 +44,6 @@ recurseLoad = function(list, data){
         });
     }
 }
-recurseLoad(resourceList, gamesData);
 
 //
 //

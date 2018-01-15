@@ -3,5 +3,5 @@ gamesData.push({
    "title" : "EZ $$$",
    "metaishTag" : 1 + 2 + 32,
    "link" : "https://github.com/ArtlessAvian/school-blackjack",
-   "text" : [""]
+   "text" : []
 });

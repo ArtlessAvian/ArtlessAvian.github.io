@@ -20,8 +20,12 @@
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="./css/dark.css">
+
     <script>var app = angular.module('myapp', []);</script>
     <script src="js/games/games.js"></script>
+
 </head>
 
 <body ng-app="myapp">
@@ -68,21 +72,45 @@
         <h2 class="text-center">{{entry.title}}</h2>
 
         <div class="well container">
-            <div class="col-md-4" ng-if="entry.images">
-                <img ng-repeat="image in entry.images" class="img-responsive" src="res/games/{{image}}" alt="res/games/{{image}}">
+            <div ng-if="entry.link">
+                <a ng-href="{{entry.link}}">Link! ({{entry.link}})</a>
+                <hr>
+            </div>
+            <div ng-repeat="text in entry.text">
+                <blockquote>
+                    {{text}}
+                </blockquote>
+            </div>
+            <div ng-if="!entry.text.length">
+                Wow, look. Nothing!
             </div>
 
-            <div ng-class="{true:'col-md-8', false:'col-md-12'}[entry.images]">
-                <div ng-if="entry.link">
-                    <a ng-href="{{entry.link}}">Link! ({{entry.link}})</a>
-                    <hr>
-                </div>
-                <div ng-repeat="text in entry.text">
-                    <blockquote>
-                        {{text}}
-                    </blockquote>
+            <div ng-if="entry.images.length">
+                <hr>
+
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+                    <ol class="carousel-indicators">
+                        <li ng-repeat="image in entry.images" data-target="#myCarousel" data-slide-to="{{$index}}" ng-class="{'active': $first}"></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+                        <div class="item" ng-repeat="image in entry.images" ng-class="{'active': $first}">
+                            <img class="center-block" src="./res/games/{{entry.tab}}/{{image}}" alt="{{image}} @ ./res/games/{{entry.tab}}/{{image}}">
+                        </div>
+                    </div>
+
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
             </div>
+
         </div>
 
     </div>
@@ -101,13 +129,22 @@
 </footer>
 
 <script>
+
     app.directive('navbarThing', function() {
       return {
           restrict: 'AE',
           replace: 'true',
-          templateUrl: 'directives/navbar-thing.html'
+          templateUrl: './directives/navbar-thing.html'
       };
     });
+
+        <!--var script = document.createElement("script");-->
+        <!--script.src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js";-->
+        <!--script.onload = function(){-->
+            <!--$("#myCarousel").carousel();-->
+        <!--}-->
+        <!--document.head.appendChild(script);-->
+
 </script>
 
 </body>
