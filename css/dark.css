@@ -4,7 +4,10 @@ body {
     color : #AAAAAA;
 
     font-family : "Roboto";
+    /* assumes all pages has a navbar */
+    margin-top : 70px;
 }
+
 .jumbotron {
     background-color : #808C94;
     color : #333333;
@@ -13,7 +16,7 @@ body {
 }
 
 .navbar {
-    background-color : #2E3C46
+    background-color : #2E3C46;
 }
 
 p {
