@@ -1,13 +1,16 @@
 
 var messages = [
-    "whens melee",
-    "did someone say starcraft 2",
-    "chess grandmaster",
-    "what's an airport again",
-    "fixing horrendous posture",
-    "boom tetris for jeff",
-    "stop stalking me",
-    "i write games!"
+    "competitive Super Smash Bros!",
+    "fake Starcraft 2 apm!",
+    "chess fradulence!",
+    "... what's an airport again?",
+    "improving bad posture!",
+    "BOOM. Tetris for Jeff!",
+    "reinventing the wheel!",
+    "mostly competent gamedev!",
+    "awful webdev!",
+    "impostor syndrome!",
+    "poor color schemes!"
 ]
 
 var period = 7000;

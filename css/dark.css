@@ -1,22 +1,22 @@
 
 body {
-    background-color : #252525;
-    color : #AAAAAA;
+    -background-color : #252525;
+    -color : #AAAAAA;
 
     font-family : "Roboto";
     /* assumes all pages has a navbar */
-    margin-top : 70px;
+    -margin-top : 70px;
 }
 
 .jumbotron {
-    background-color : #808C94;
-    color : #333333;
+    -background-color : #808C94;
+    -color : #333333;
 
-    text-shadow: 8px 8px 10px #606C74;
+    -text-shadow: 8px 8px 10px #606C74;
 }
 
 .navbar {
-    background-color : #2E3C46;
+    -background-color : #2E3C46;
 }
 
 p {
@@ -25,25 +25,25 @@ p {
 }
 
 .well {
-    background-color : #2E3C46;
+    -background-color : #2E3C46;
 }
 
 .alert-warning {
-    background-color : #E7D9C6;
-    color : #998469;
+    -background-color : #E7D9C6;
+    -color : #998469;
 }
 
 .alert-info {
-    background-color : #808C94;
-    color : #455662;
+    -background-color : #808C94;
+    -color : #455662;
 }
 
 .alert-error {
-    background-color : #E7CCC6;
-    color : #997269;
+    -background-color : #E7CCC6;
+    -color : #997269;
 }
 
 .alert-success {
-    background-color : #8EA698;
-    color : #4B6E59;
+    -background-color : #8EA698;
+    -color : #4B6E59;
 }
