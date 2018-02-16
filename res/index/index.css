@@ -1,0 +1,11 @@
+@media (min-width: 992px) {
+
+    .affix {
+        position: fixed;
+        top : 30px;
+    }
+}
+
+body {
+    position: relative;
+}
