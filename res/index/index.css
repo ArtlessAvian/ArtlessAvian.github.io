@@ -9,3 +9,7 @@
 body {
     position: relative;
 }
+
+p, li {
+    font-size: 16px;
+}

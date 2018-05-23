@@ -1,20 +1,21 @@
 
 var messages = [
     "competitive Super Smash Bros!",
-//    "fake Starcraft 2 apm!",
-//    "chess fradulence!",
-//    "... what's an airport again?",
-//    "improving bad posture!",
+    "improving bad posture!",
+    "constructing additional pylons!",
     "BOOM. Tetris for Jeff!",
     "reinventing the wheel!",
+    "grandmaster level calculator APM!",
     "mostly competent gamedev!",
+    "taking redstone too seriously!",
     "awful webdev!",
     "impostor syndrome!",
-    "poor color schemes!"
+    "poor color schemes!",
+    "assuming sin x = x for small values of x!"
 ]
 
 var period = 7000;
-var swooce_offset = 6000;
+var swooce_offset = 6600;
 
 var help_lerp = function(t, a)
 {
@@ -34,7 +35,7 @@ var coolThing = function()
     {
         $("#cool-thing").css("opacity", 1 - help_lerp((now % period) - swooce_offset, period - swooce_offset));
         $("#cool-thing2").css("opacity", help_lerp((now % period) - swooce_offset, period - swooce_offset));
-        $("#cool-thing2").css("margin-top", 300 - 300 * help_lerp((now % period) - swooce_offset, period - swooce_offset) + "px");
+        $("#cool-thing2").css("margin-top", 100 - 100 * help_lerp((now % period) - swooce_offset, period - swooce_offset) + "px");
     }
     else if (lastRun % period > now % period || lastRun === -1)
     {
@@ -59,7 +60,7 @@ var trueResize = function()
 
     // the stickyness only works on the initial load, resizing breaks it
     // probably because uhh... magic.
-    $("#stickyNav").attr("data-offset-top", 24 + window.innerHeight);
+    $("#stickyNav").attr("data-offset-top", window.innerHeight);
 
     $("#hipsterThing").css("padding-top", (window.innerHeight/4 - 100) + "px");
 }
@@ -74,3 +75,17 @@ var fakeResize = function()
 
 window.addEventListener("resize", fakeResize);
 setTimeout(trueResize, 1);
+
+
+app.controller("testController", function($scope){
+    $scope.aptests = [
+        {name: 'Calculus BC', score: 5, year: 2017},
+        {name: 'Calculus AB Subscore', score: 5, year: 2017},
+        {name: 'Statistics', score: 'TBD', year: 2018},
+        {name: 'Physics 1', score: 4, year: 2016},
+        {name: 'Physics 2', score: 4, year: 2017},
+        {name: 'Physics C Mechanics', score: 'TBD', year: 2018},
+        {name: 'Physics C E&M', score: 'TBD', year: 2018},
+        {name: 'Spanish', score: 'TBD', year: 2018}
+    ];
+});
