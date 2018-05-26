@@ -1,37 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+---
 
-<head>
-    <meta charset="UTF-8">
-    <title>ArtlessAvian</title>
-
-    <!--&lt;!&ndash;jquery cdn&ndash;&gt;-->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
-            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-            crossorigin="anonymous"></script>
-
-    <!--angular cdn-->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-
-    <!--bootstrap cdns-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous"></script>
-
-    <link href="https://bootswatch.com/3/slate/bootstrap.min.css" rel="stylesheet">
-
-    <link href="res/index/index.css" rel="stylesheet">
-
-    <script>var app = angular.module('myapp', []);</script>
-    <script src="js/index.js"></script>
-
-    <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">-->
-</head>
-
-<body data-spy="scroll" data-target="#spyNav" ng-app="myapp">
-
+<div data-spy="scroll" data-target="#spyNav">
 
 <div id="home" class="jumbotron" style="height:100vh; background-size:cover;
     background-image: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)),  url(./res/index/IMG_20180216_005326.jpg);">
@@ -53,7 +24,7 @@
                     <a href="mailto:artlessavian@gmail.com"><span class="glyphicon glyphicon-envelope"></span> Email</a> |
                     <a href="https://www.github.com/artlessavian"><span class="glyphicon glyphicon-hdd"></span> Github</a>
                     <br>
-                    I'm not brave enough to put more contact info, but maybe in college!
+                    More contact info later.
                 </div>
             </div>
         </div>
@@ -61,153 +32,146 @@
 </div>
 
 <div class="container">
-
-<div class="row">
-    <div class="col-xs-12 col-md-2" id="spyNav">
-        <ul class="nav nav-pills nav-stacked" id="stickyNav" data-spy="affix" data-offset-top="990">
-            <li class="active"><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#links">Links</a></li>
-            <!-- <li><a href="#links">Menu 3</a></li> -->
-        </ul>
-    </div>
-
-    <div class="col-md-10">
-
-        <div class="page-header" id="about">
-            <h1>About</h1>
+    <div class="row">
+        <div class="col-xs-12 col-md-2" id="spyNav">
+            <ul class="nav nav-pills nav-stacked" id="stickyNav" data-spy="affix" data-offset-top="990">
+                <li class="active"><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#links">Links</a></li>
+                <!-- <li><a href="#links">Menu 3</a></li> -->
+            </ul>
         </div>
-        <p>
-            I have graduated highschool. I love programming and being obnoxiously "good" at competitive games.
-            I am self-taught in Computer Science, and I have privately produced clones of some games.
-            Currently, I use Java, but I can be flexible and switch to another language.
-            To make games, I have been using LibGDX, a game oriented graphics framework in Java.
-            I am getting around to using the Godot Engine, and I plan to make something sometime soon.
-            <br>
-            For some random facts, I can speak Mandarin Chinese, but cannot write it. I can write Spanish, but cannot speak it fluently.
-            I endearingly describe all my projects as "hot garbage." They aren't really though. Apparently, I sing pretty well.
-        </p>
 
-        <div class="page-header" id="projects">
+        <div class="col-md-10">
+
+            <div class="page-header" id="about">
+                <h1>About Me</h1>
+            </div>
+            <p>
+                I have graduated highschool. I love programming and being obnoxiously "good" at competitive games.
+                I am self-taught in Computer Science, and I have privately produced clones of some games.
+                Currently, I use Java, but I can be flexible and switch to another language.
+                To make games, I have been using LibGDX, a game oriented graphics framework in Java.
+                I am getting around to using the Godot Engine, and I plan to make something sometime soon.
+            </p><p>
+                For some random facts, I can speak Mandarin Chinese, but cannot write it. I can write Spanish, but cannot speak it fluently.
+                I endearingly describe all my projects as "hot garbage." They aren't really though. Apparently, I sing pretty well.
+            </p>
+
+            <div class="page-header" id="projects">
                 <h1>Projects</h1>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="well">
-                    <h4>RECENT:<br>Subpar Trash</h4>
-                    <img src="res/index/subpar-trash.PNG" class="img-responsive">
-                    <p>
-                        =====<br>
-                        Currently, I am trying to write an engine for a Smash Brothers like game, hence the title.
-                        I plan to open source the engine, and write a game closed source.
-                    </p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="well">
+                        <h4>RECENT:<br>Subpar Trash</h4>
+                        <img src="res/index/subpar-trash.PNG" class="img-responsive">
+                        <p>
+                            =====<br>
+                            Currently, I am trying to write an engine for a Smash Brothers like game, hence the title.
+                            I plan to open source the engine, and write a game closed source.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">        
+                    <div class="well">
+                        <h4>NOTABLE:<br>Runbrella</h4>
+                        <iframe class="img-responsive" src="https://www.youtube.com/embed/P9tygC5jBfw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <p>
+                            =====<br>
+                            I wrote this hot garbage in 24 hours in a hackathon. I didn't expect to win, so I used it
+                            as an opportunity to show my fellow officers in our CS club team work. It won anyways, somehow.
+                            FUN FACT: It also runs on phones.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="well">
+                        <h4>NOTABLE:<br>final-lethal-league</h4>
+                        <iframe class="img-responsive" src="https://www.youtube.com/embed/j8ESuW5rtmo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <p>
+                            =====<br>
+                            Wowee. Final project for APCS, by overqualified nerds. Another team project I led,
+                            with two other Ryans. It's the most complete project or game I have ever made. It's legitimately good.
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4">        
-                <div class="well">
-                    <h4>NOTABLE:<br>Runbrella</h4>
-                    <iframe class="img-responsive" src="https://www.youtube.com/embed/P9tygC5jBfw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                    <p>
-                        =====<br>
-                        I wrote this hot garbage in 24 hours in a hackathon. I didn't expect to win, so I used it
-                        as an opportunity to show my fellow officers in our CS club team work. It won anyways, somehow.
-                        FUN FACT: It also runs on phones.
-                    </p>
-                </div>
+
+            <div class="page-header" id="education">
+                <h1>Education</h1>
             </div>
-            <div class="col-md-4">
-                <div class="well">
-                    <h4>NOTABLE:<br>final-lethal-league</h4>
-                    <iframe class="img-responsive" src="https://www.youtube.com/embed/j8ESuW5rtmo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                    <p>
-                        =====<br>
-                        Wowee. Final project for APCS, by overqualified nerds. Another team project I led,
-                        with two other Ryans. It's the most complete project or game I have ever made. It's legitimately good.
-                    </p>
-                </div>
+            <h3> AP Testing </h3>
+            <p> AP Scholar with Honor</p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Score</th>
+                        <th>Year Taken</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {%- for test in site.data.my_ap_tests -%}
+                    <tr>
+                        <td>{{test.name}}</td>
+                        <td>{{test.score}}</td>
+                        <td>{{test.year}}</td>
+                    </tr>
+                {%- endfor -%}
+                </tbody>
+            </table>
+
+            <ul>
+                <li>High School Graduate</li>
+                <li>Heading to college</li>
+            </ul>
+
+            <div class="page-header" id="skills">
+                <h1>Skills</h1>
             </div>
+
+            <div class="alert alert-danger">
+                <strong>Some of this may be subjective.</strong> Not all of it is, though. Keep in mind what is objective and what is not.
+            </div>
+
+            <h3>Programming or Computer Science</h3>
+            <p>        
+                I have moderate experience with algorithms
+                (Time Complexity, Master Method, Designing Greedy Algorithms)
+                and data structures (Types, Usages, Associated Time Complexities), both with intuitive knowledge.
+                I have touched threading, but have never used it in a project.
+                I have some experience in software design (MVC, Observer Pattern, State Pattern), and am currently working to improve it.
+                I can quickly learn APIs and frameworks, such as Java's LibGDX and Javacord.
+            </p><p>
+                I have looked into Machine Learning, and know of basic implementations and use cases. I have not written an implementation,
+                nor used it in a project.
+            </p><p>
+                I have looked into Webdev. This site (including several previous iterations) is written by me!
+            </p>
+            <h3>Other STEM</h3>
+            <p>
+                I try to learn math for intuitive understanding.
+                I have been awarded "best Physics student" in my graduating class. <!-- I think, unless I am VERY mistaken-->
+            </p>
+            <!-- <h3>Other Arts</h3>
+            <p>
+                I can do basic video editing and photo editing, with passing interest.
+            </p> -->
+
+            <div class="page-header" id="links">
+                <h1>Lorem Ipsum (haha TODO)</h1>
+            </div>
+            <p>
+                Duis tempor est ac feugiat finibus. Duis hendrerit, nisi porta consequat condimentum, purus quam dapibus arcu, ut consequat dolor justo sit amet ante. Morbi facilisis dignissim tellus congue finibus. Ut tortor felis, laoreet at semper eu, laoreet non nisi. Morbi aliquam dui sit amet diam aliquam, ac ornare urna bibendum. Maecenas congue, arcu quis eleifend ornare, nibh massa rhoncus diam, auctor pulvinar nibh lectus sit amet lacus. Cras vitae ante justo. Sed aliquet mauris eget lacus placerat iaculis. Sed maximus placerat ornare. Curabitur suscipit dignissim metus, ut interdum purus tincidunt id. Phasellus sed tincidunt est. Nam vitae lectus consequat, pretium felis id, efficitur sapien. Suspendisse sit amet ligula non mi eleifend dapibus a ut massa. Cras varius nisi vel dictum vestibulum. Nullam sed sapien sed enim cursus tempus vitae nec dui. Pellentesque tristique, dolor vel condimentum vulputate, mi eros ultrices mi, quis molestie nisl odio dictum diam.
+                Mauris ultrices nulla nec diam laoreet tristique. Pellentesque convallis elit tortor, a efficitur velit placerat porttitor. Praesent dapibus odio libero, in vehicula ipsum tincidunt in. Ut pretium risus a nisi pharetra, malesuada dignissim sapien semper. Suspendisse at augue id urna rutrum accumsan. Aliquam varius maximus lorem et condimentum. Duis fringilla ultricies auctor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            </p>
         </div>
 
-        <div class="page-header" id="education">
-            <h1>Education</h1>
-        </div>
-        <h3> AP Testing </h3>
-        <p> AP Scholar with Honor</p>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Score</th>
-                    <th>Year Taken</th>
-                </tr>
-            </thead>
-            <tbody ng-controller="testController">
-                <tr ng-repeat="test in aptests">
-                    <td>{{test.name}}</td>
-                    <td>{{test.score}}</td>
-                    <td>{{test.year}}</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <ul>
-            <li>High School Graduate</li>
-            <li>Heading to college</li>
-        </ul>
-
-        <div class="page-header" id="skills">
-            <h1>Skills</h1>
-        </div>
-
-        <div class="alert alert-danger">
-            <strong>Some of this may be subjective.</strong> Not all of it is, though. Keep in mind what is objective and what is not.
-        </div>
-
-        <h3>Programming or Computer Science</h3>
-        <p>        
-            I have moderate experience with algorithms
-            (Time Complexity, Master Method, Designing Greedy Algorithms)
-            and data structures (Types, Usages, Associated Time Complexities), both with intuitive knowledge.
-            I have touched threading, but have never used it in a project.
-            I have some experience in software design (MVC, Observer Pattern, State Pattern), and am currently working to improve it.
-            I can quickly learn APIs and frameworks, such as Java's LibGDX and Javacord.
-            <br>
-            I have looked into Machine Learning, and know of basic implementations and use cases. I have not written an implementation,
-            nor used it in a project.
-            <br>
-            I have looked into Webdev. This site (including several previous iterations) is written by me, using Bootstrap, JQuery, and AngularJS!
-        </p>
-        <h3>Other STEM</h3>
-        <p>
-            I try to learn math for intuitive understanding.
-            I have been awarded "best Physics student" in my graduating class. <!-- I think, unless I am VERY mistaken-->
-        </p>
-        <!-- <h3>Other Arts</h3>
-        <p>
-            I can do basic video editing and photo editing, with passing interest.
-        </p> -->
-
-        <div class="page-header" id="links">
-            <h1>Lorem Ipsum (haha TODO)</h1>
-        </div>
-        <p>
-            Duis tempor est ac feugiat finibus. Duis hendrerit, nisi porta consequat condimentum, purus quam dapibus arcu, ut consequat dolor justo sit amet ante. Morbi facilisis dignissim tellus congue finibus. Ut tortor felis, laoreet at semper eu, laoreet non nisi. Morbi aliquam dui sit amet diam aliquam, ac ornare urna bibendum. Maecenas congue, arcu quis eleifend ornare, nibh massa rhoncus diam, auctor pulvinar nibh lectus sit amet lacus. Cras vitae ante justo. Sed aliquet mauris eget lacus placerat iaculis. Sed maximus placerat ornare. Curabitur suscipit dignissim metus, ut interdum purus tincidunt id. Phasellus sed tincidunt est. Nam vitae lectus consequat, pretium felis id, efficitur sapien. Suspendisse sit amet ligula non mi eleifend dapibus a ut massa. Cras varius nisi vel dictum vestibulum. Nullam sed sapien sed enim cursus tempus vitae nec dui. Pellentesque tristique, dolor vel condimentum vulputate, mi eros ultrices mi, quis molestie nisl odio dictum diam.
-            Mauris ultrices nulla nec diam laoreet tristique. Pellentesque convallis elit tortor, a efficitur velit placerat porttitor. Praesent dapibus odio libero, in vehicula ipsum tincidunt in. Ut pretium risus a nisi pharetra, malesuada dignissim sapien semper. Suspendisse at augue id urna rutrum accumsan. Aliquam varius maximus lorem et condimentum. Duis fringilla ultricies auctor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-        </p>
     </div>
+</div>
 
 </div>
-</div>
-
-<footer>
-    <hr>
-    <div class="container">
-        &copy; 2018 ArtlessAvian
-    </div>
-</footer>
-
-</body>
-</html>

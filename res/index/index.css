@@ -10,6 +10,11 @@ body {
     position: relative;
 }
 
-p, li {
+p {
+    font-size: 16px;
+    /* text-indent: 40px */
+}
+
+li {
     font-size: 16px;
 }
