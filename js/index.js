@@ -10,8 +10,7 @@ var messages = [
     "taking redstone too seriously!",
     "awful webdev!",
     "impostor syndrome!",
-    "poor color schemes!",
-    "assuming sin x = x for small values of x!"
+    "poor color schemes!"
 ]
 
 var period = 7000;
