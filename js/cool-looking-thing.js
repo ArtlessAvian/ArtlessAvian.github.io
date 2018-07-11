@@ -1,7 +1,16 @@
 
 var context = document.getElementById("coolLookingThing").getContext("2d")
-context.canvas.width = window.innerWidth
-context.canvas.height = window.innerHeight - 100
+
+var resizeCanvas = function()
+{
+    context.canvas.height = window.innerHeight;
+    context.canvas.width = window.innerWidth;
+    context.imageSmoothingEnabled = false;
+}
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+
+// actual code here ---------------------------------------------------------------------
 
 var intBetwNums = function(a, b)
 {
@@ -22,10 +31,33 @@ var divideScreen = function(array, i, resolution)
 }
 
 var model = {
-    
+
+    thingy : [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+
     getHeight : function(x, z)
     {
-        return Math.max(Math.floor(z) - 2, 0);
+        x = Math.floor(x);
+        z = Math.floor(z);
+        // return Math.max(Math.floor(z) - 2, 0);
+        // return Math.sqrt(x * x + z * z)
+        // return 20 - Math.abs(x) - Math.abs(z - 30)
+        return Math.sqrt(z/5) * 5 - (Math.cos(x) + Math.cos(z))
+
+        // return this.thingy[z] * 5;
     },
 
     getHeight2 : function(x1, z1, x2, z2)
@@ -87,6 +119,11 @@ var model = {
 
             lastX = x;
             lastZ = z;
+
+            // if (result.length > 8)
+            // {
+            //     break;
+            // }
         }
 
         return result;
@@ -95,34 +132,48 @@ var model = {
 
 var badOrtho = {
     temp : [0, 0],
-    a : 0,
+    height : 10,
+    frustrumHeight : 10,
+    angle : -45 * Math.PI/180,
+
+    getThingy : function(distance, height)
+    {
+        return height - Math.tan(this.angle) * distance; 
+    },
+
+    getScreenY : function(distance, height)
+    {
+        return context.canvas.height * (1 - (this.getThingy(distance, height) - this.height + this.frustrumHeight/2)/this.frustrumHeight)
+    },
 
     drawWall : function(wall, i, resolution)
     {
         // if (wall.heightChange > 0)
         {
             divideScreen(this.temp, i, resolution);
-            // context.fillStyle = "hsl(" + (30 * (wall.heightBefore + wall.heightChange)) + ", 100%, 50%)";
-            context.fillStyle = "hsl(" + (Math.random() * 360) + ", 60%, 70%)";
-
-            // console.log(context.fillStyle, wall.distance, this.a);
-            
-            // context.fillRect(this.temp[0], Math.random() * 200, this.temp[1], 10)
-            context.fillRect(this.temp[0], context.canvas.height - 20 * (wall.heightBefore + wall.heightChange),
-                this.temp[1], 1000000000000);
+            context.fillStyle = "hsl(" + (30 * (wall.heightBefore)) + ", 70%, 30%)";
+            context.fillRect(this.temp[0], this.getScreenY(wall.distance, wall.heightChange + wall.heightBefore),
+                this.temp[1], 10000);
+            // console.log(this.getScreenY(wall.distance, wall.heightChange + wall.heightBefore))
         }
     },
 
     drawFloor : function(wall, i, resolution)
     {
-        // lol
-        return;
+        // if (wall.heightBefore < h)
+        {
+            divideScreen(this.temp, i, resolution);
+            context.fillStyle = "hsl(" + (30 * (wall.heightBefore)) + ", 70%, 50%)";
+            context.fillRect(this.temp[0], this.getScreenY(wall.distance, wall.heightBefore),
+                this.temp[1], 10000);
+            // console.log(this.getScreenY(wall.distance, wall.heightChange + wall.heightBefore))
+        }
     }
 }
 
 var view = {
-    fov : 15 * Math.PI/180,
-    resolution : 30,
+    fov : 60 * Math.PI/180,
+    resolution : 300,
     heading : 0 * Math.PI/180,
     z : 0,
     projection : badOrtho,
@@ -145,6 +196,9 @@ var view = {
 
     drawCamera : function()
     {
+        context.fillStyle = "hsl(200, 50%, 70%)"
+        context.fillRect(0, 0, window.innerWidth, window.innerHeight)
+
         step = this.fov / this.resolution;
         bound = this.resolution/2 - 0.5;
         for (i = -bound; i <= bound; i++)
@@ -188,11 +242,25 @@ var view = {
         }
 
         context.restore();
-    }
+    },
 }
 
-view.drawCamera();
 
+var update = function()
+{
+    view.drawCamera();
+}
+
+update();
+// setInterval(update, 100/6);
+// addEventListener("resize", update);
+
+var onMouseMove = function(e) {
+    badOrtho.angle = 2 * (0.5 - e.pageY/window.innerHeight) * 70 * Math.PI/180;
+    view.heading = (-2 * (0.5 - e.pageX/window.innerWidth) * 60) * Math.PI/180;
+    update();
+}
+document.addEventListener('mousemove', onMouseMove);
 
 
 
