@@ -120,10 +120,10 @@ var model = {
             lastX = x;
             lastZ = z;
 
-            // if (result.length > 8)
-            // {
-            //     break;
-            // }
+            if (result.length >= 30)
+            {
+                break;
+            }
         }
 
         return result;
@@ -132,9 +132,9 @@ var model = {
 
 var badOrtho = {
     temp : [0, 0],
-    height : 10,
-    frustrumHeight : 10,
-    angle : -45 * Math.PI/180,
+    camHeight : 10,
+    frustrumHeight : 5,
+    angle : -5 * Math.PI/180,
 
     getThingy : function(distance, height)
     {
@@ -143,28 +143,29 @@ var badOrtho = {
 
     getScreenY : function(distance, height)
     {
-        return context.canvas.height * (1 - (this.getThingy(distance, height) - this.height + this.frustrumHeight/2)/this.frustrumHeight)
+        frustrumThing = this.frustrumHeight / Math.abs(Math.cos(this.angle))
+        return context.canvas.height * (1 - (this.getThingy(distance, height) - this.camHeight + frustrumThing/2)/frustrumThing)
     },
 
-    drawWall : function(wall, i, resolution)
+    drawWall : function(wall, i, resolution, unfisheye)
     {
         // if (wall.heightChange > 0)
         {
             divideScreen(this.temp, i, resolution);
             context.fillStyle = "hsl(" + (30 * (wall.heightBefore)) + ", 70%, 30%)";
-            context.fillRect(this.temp[0], this.getScreenY(wall.distance, wall.heightChange + wall.heightBefore),
+            context.fillRect(this.temp[0], this.getScreenY(wall.distance * unfisheye, wall.heightChange + wall.heightBefore),
                 this.temp[1], 10000);
             // console.log(this.getScreenY(wall.distance, wall.heightChange + wall.heightBefore))
         }
     },
 
-    drawFloor : function(wall, i, resolution)
+    drawFloor : function(wall, i, resolution, unfisheye)
     {
         // if (wall.heightBefore < h)
         {
             divideScreen(this.temp, i, resolution);
             context.fillStyle = "hsl(" + (30 * (wall.heightBefore)) + ", 70%, 50%)";
-            context.fillRect(this.temp[0], this.getScreenY(wall.distance, wall.heightBefore),
+            context.fillRect(this.temp[0], this.getScreenY(wall.distance * unfisheye, wall.heightBefore),
                 this.temp[1], 10000);
             // console.log(this.getScreenY(wall.distance, wall.heightChange + wall.heightBefore))
         }
@@ -186,10 +187,13 @@ var view = {
         for (j = walls.length - 1; j >= 0; j--)
         {
             wall = walls[j]; // would do pop but whatever
+            unfisheye = Math.cos(angle - this.heading)
+            // unfisheye = 1
+            
             // Draw the wall
-            this.projection.drawWall(wall, i, resolution)
+            this.projection.drawWall(wall, i, resolution, unfisheye)
             // Draw the ground before it
-            this.projection.drawFloor(wall, i, resolution)
+            this.projection.drawFloor(wall, i, resolution, unfisheye)
         }
         // this.debug(walls)
     },
@@ -255,14 +259,31 @@ update();
 // setInterval(update, 100/6);
 // addEventListener("resize", update);
 
+var kindaAverage = 1000/60
+
 var onMouseMove = function(e) {
+    start = new Date();
+    
     badOrtho.angle = 2 * (0.5 - e.pageY/window.innerHeight) * 70 * Math.PI/180;
-    view.heading = (-2 * (0.5 - e.pageX/window.innerWidth) * 60) * Math.PI/180;
+    view.heading = (-2 * (0.5 - e.pageX/window.innerWidth) * 45) * Math.PI/180;
     update();
+
+    frameTime = new Date().getTime() - start.getTime();
+    kindaAverage = (15 * kindaAverage + frameTime) / 16
+    if (kindaAverage > 1000/30)
+    {
+        console.log("could be faster")
+        view.resolution -= 1;
+        kindaAverage = 1000/30
+    }
+    if (kindaAverage < 1000/32)
+    {
+        console.log("could be slower")
+        view.resolution += 1;
+        kindaAverage = 1000/32
+    }
 }
 document.addEventListener('mousemove', onMouseMove);
-
-
 
 // context.fillRect(0, 0, 100, 100000)
 
