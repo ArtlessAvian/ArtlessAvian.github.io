@@ -9,7 +9,6 @@ var messages = [
     "mostly competent gamedev!",
     "taking redstone too seriously!",
     "awful webdev!",
-    "impostor syndrome!",
     "poor color schemes!"
 ]
 
@@ -61,7 +60,7 @@ var trueResize = function()
     // probably because uhh... magic.
     $("#stickyNav").attr("data-offset-top", window.innerHeight);
 
-    $("#hipsterThing").css("padding-top", (window.innerHeight/4 - 100) + "px");
+    $("#hipsterThing").css("padding-top", (window.innerHeight/2 - 160) + "px");
 }
 
 var fakeResize = function()
