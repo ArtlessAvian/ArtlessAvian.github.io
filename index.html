@@ -4,9 +4,8 @@ title : Home
 tags : static
 ---
 
+<link href="res/index/index.css" rel="stylesheet">
 <script src="js/index.js"></script>
-
-<div data-spy="scroll" data-target="#spyNav">
 
 <div id="home" class="jumbotron" style="height:100vh; background-size:cover;
     background-image: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1)),  url(./res/index/IMG_20180216_005326.jpg);">
@@ -35,7 +34,22 @@ tags : static
     </div>
 </div>
 
-<div class="container">
+<nav class="navbar navbar-default">
+    <ul class="nav navbar-nav">
+        <li><a class="navbar-brand">ArtlessAvian</a></li>
+        <li><a href="index.html">Home</a></li>
+        {%- for entry in site.html_pages -%}
+            {%- if entry.title == 404 %}
+                {%- continue -%}
+            {%- elsif entry.title == "Home" %}
+                {%- continue -%}
+            {%- endif -%}
+        <li><a href="{{entry.url}}">{{entry.title}}</a></li>
+        {%- endfor -%}
+    </ul>
+</nav> 
+
+<div class="container" data-spy="scroll" data-target="#spyNav">
     <div class="row">
 
         <div class="col-md-10">
@@ -69,15 +83,15 @@ tags : static
             </p>
 
             <div class="page-header" id="projects">
-                <h1>Projects</h1>
+                <h1>Projects <small>Section under construction!</small></h1>
             </div>
+
             <div class="row">
                 <div class="col-md-4">
                     <div class="well">
-                        <h4>RECENT:<br>Subpar Trash</h4>
+                        <h3>RECENT:<br>Subpar Trash</h3>
                         <img src="res/index/subpar-trash.PNG" class="img-responsive">
                         <p>
-                            =====<br>
                             Currently, I am trying to write an engine for a Smash Brothers like game, hence the title.
                             I plan to open source the engine, and write a game closed source.
                         </p>
@@ -85,10 +99,9 @@ tags : static
                 </div>
                 <div class="col-md-4">        
                     <div class="well">
-                        <h4>NOTABLE:<br>Runbrella</h4>
+                        <h3>NOTABLE:<br>Runbrella</h3>
                         <iframe class="img-responsive" src="https://www.youtube.com/embed/P9tygC5jBfw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                         <p>
-                            =====<br>
                             I wrote this hot garbage in 24 hours in a hackathon. I didn't expect to win, so I used it
                             as an opportunity to show my fellow officers in our CS club team work. It won anyways, somehow.
                             FUN FACT: It also runs on phones.
@@ -97,16 +110,31 @@ tags : static
                 </div>
                 <div class="col-md-4">
                     <div class="well">
-                        <h4>NOTABLE:<br>final-lethal-league</h4>
+                        <h3>NOTABLE:<br>final-lethal-league</h3>
                         <iframe class="img-responsive" src="https://www.youtube.com/embed/j8ESuW5rtmo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                         <p>
-                            =====<br>
                             Wowee. Final project for APCS, by overqualified nerds. Another team project I led,
                             with two other Ryans. It's the most complete project or game I have ever made. It's legitimately good.
                         </p>
                     </div>
                 </div>
             </div>
+            
+            <div class="page-header" id="blog">
+                <h1>Pseudo-Blog</h1>
+            </div>
+            <div class="row">
+            {%- for post in site.posts limit:3 -%}
+                <div class="col-md-4">
+                    <div class="well">
+                        <h3><a href="{{post.url}}">{{post.title}}</a></h3>
+                        <blockquote>{{post.excerpt | strip_html | truncatewords : 30}}</blockquote>
+                        <p class="small">{{post.date | date: site.date-format}}</p>
+                    </div>
+                </div>
+            {%- endfor -%}
+            </div>
+
 
             <div class="page-header" id="education">
                 <h1>Education</h1>
@@ -186,6 +214,7 @@ tags : static
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#blog">Pseudo-Blog</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <!-- <li><a href="#links">Links</a></li> -->
@@ -194,6 +223,4 @@ tags : static
         </div>
 
     </div>
-</div>
-
 </div>

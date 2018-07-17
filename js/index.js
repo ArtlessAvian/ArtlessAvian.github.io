@@ -58,7 +58,7 @@ var trueResize = function()
 
     // the stickyness only works on the initial load, resizing breaks it
     // probably because uhh... magic.
-    $("#stickyNav").attr("data-offset-top", window.innerHeight);
+    $("#stickyNav").attr("data-offset-top", window.innerHeight + 52);
 
     $("#hipsterThing").css("padding-top", (window.innerHeight/2 - 160) + "px");
 }
@@ -73,17 +73,3 @@ var fakeResize = function()
 
 window.addEventListener("resize", fakeResize);
 setTimeout(trueResize, 1);
-
-
-app.controller("testController", function($scope){
-    $scope.aptests = [
-        {name: 'Calculus BC', score: 5, year: 2017},
-        {name: 'Calculus AB Subscore', score: 5, year: 2017},
-        {name: 'Statistics', score: 'TBD', year: 2018},
-        {name: 'Physics 1', score: 4, year: 2016},
-        {name: 'Physics 2', score: 4, year: 2017},
-        {name: 'Physics C Mechanics', score: 'TBD', year: 2018},
-        {name: 'Physics C E&M', score: 'TBD', year: 2018},
-        {name: 'Spanish', score: 'TBD', year: 2018}
-    ];
-});

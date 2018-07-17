@@ -174,7 +174,7 @@ var badOrtho = {
 
 var view = {
     fov : 60 * Math.PI/180,
-    resolution : 300,
+    resolution : 10,
     heading : 0 * Math.PI/180,
     z : 0,
     projection : badOrtho,

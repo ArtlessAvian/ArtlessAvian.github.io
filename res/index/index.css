@@ -2,14 +2,28 @@
 
     .affix {
         position: fixed;
-        top : 30px;
+        top : 20px;
     }
 }
+
 
 body {
     position: relative;
     line-height: 1.5
 }
+
+.jumbotron {
+    margin-bottom: 0px;
+}
+
+.well h3 {
+    margin-top: 0px;
+}
+
+.well p {
+    margin-bottom: 0px;
+}
+
 
 p {
     font-size: 16px;
