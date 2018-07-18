@@ -4,11 +4,11 @@ title : Home
 tags : static
 ---
 
-<link href="res/index/index.css" rel="stylesheet">
+<link href="assets/css/index.css" rel="stylesheet">
 <script src="js/index.js"></script>
 
 <div id="home" class="jumbotron" style="height:100vh; background-size:cover;
-    background-image: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1)),  url(./res/index/IMG_20180216_005326.jpg);">
+    background-image: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1)),  url(assets/images/index/IMG_20180216_005326.jpg);">
     <div class="container-fluid">
         <div class="row text-right" style="padding-right: 30px;">
             <!-- <a href="informal/index.html">Informal?</a> -->
@@ -34,20 +34,7 @@ tags : static
     </div>
 </div>
 
-<nav class="navbar navbar-default">
-    <ul class="nav navbar-nav">
-        <li><a class="navbar-brand">ArtlessAvian</a></li>
-        <li><a href="index.html">Home</a></li>
-        {%- for entry in site.html_pages -%}
-            {%- if entry.title == 404 %}
-                {%- continue -%}
-            {%- elsif entry.title == "Home" %}
-                {%- continue -%}
-            {%- endif -%}
-        <li><a href="{{entry.url}}">{{entry.title}}</a></li>
-        {%- endfor -%}
-    </ul>
-</nav> 
+{%- include navbar.html -%}
 
 <div class="container" data-spy="scroll" data-target="#spyNav">
     <div class="row">
@@ -76,7 +63,7 @@ tags : static
                     <li>I endearingly describe all my projects as "hot garbage." (They aren't really garbage though.)</li>
                     <li>I can be an information sponge, occasionally.</li>
                     <li>I can speak Mandarin Chinese, but cannot write it.</li>
-                    <li>I can write Spanish, but cannot speak it fluently.</li>
+                    <li>I can write Spanish, but cannot speak it fluently (but my pronunciation is on point).</li>
                     <!-- <li></li> -->
                 </ul>
                 
@@ -86,8 +73,26 @@ tags : static
                 <h1>Projects <small>Section under construction!</small></h1>
             </div>
 
-            <div class="row">
+            {%- assign sorted = site.notable_proj_collection | sort:"rough-date" | reverse -%}
+            {%- for post in sorted limit:6 -%}
+                {%- assign mod = forloop.index | modulo : 3 -%}
+                {%- if mod == 1 -%}
+                    <div class="row">
+                {%- endif -%}
                 <div class="col-md-4">
+                    <div class="well">
+                        <h3><a href="{{post.url}}">{{post.title}}</a></h3>
+                        {{post.extra-html}}
+                        {{post.status}}
+                        <blockquote>{{post.excerpt | strip_html | truncatewords : 10}}</blockquote>
+                    </div>
+                </div>
+                {%- if mod == 0 -%}
+                    </div>
+                {%- endif -%}
+            {%- endfor -%}
+
+            <!-- <div class="col-md-4">
                     <div class="well">
                         <h3>RECENT:<br>Subpar Trash</h3>
                         <img src="res/index/subpar-trash.PNG" class="img-responsive">
@@ -117,18 +122,17 @@ tags : static
                             with two other Ryans. It's the most complete project or game I have ever made. It's legitimately good.
                         </p>
                     </div>
-                </div>
-            </div>
+                </div> -->
             
             <div class="page-header" id="blog">
                 <h1>Pseudo-Blog</h1>
             </div>
             <div class="row">
-            {%- for post in site.posts limit:3 -%}
+            {%- for post in site.categories.blog limit:3 -%}
                 <div class="col-md-4">
                     <div class="well">
                         <h3><a href="{{post.url}}">{{post.title}}</a></h3>
-                        <blockquote>{{post.excerpt | strip_html | truncatewords : 30}}</blockquote>
+                        <blockquote>{{post.excerpt | strip_html | truncatewords : 10}}</blockquote>
                         <p class="small">{{post.date | date: site.date-format}}</p>
                     </div>
                 </div>

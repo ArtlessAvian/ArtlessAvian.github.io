@@ -1,0 +1,69 @@
+---
+layout : default
+---
+
+<div class="jumbotron text-center" style="margin-bottom: 0px">
+    <h1>Ryan's Stuff</h1>
+</div>
+{%- include navbar.html -%}
+
+<div class="container">
+
+    <div class="col-xs-12 col-md-10">  
+        <div class="well row">
+            <div class="col-md-6">
+                <h2>
+                    {{page.title}} <br>
+                    <small>{{page.description}}</small>
+                </h2>
+            </div>
+            <div class="col-md-6" style="text-align: right">
+                <h2>
+                    {{ page.rough-start | date: "%B %Y" }}
+                    {%- if page.rough-end -%}
+                        &nbsp;-
+                        {{ page.rough-end | date: "%B %Y" }}
+                    {%- endif -%}
+                </h2>
+            </div>
+        </div>
+    
+        {{ content }}
+    
+        <h2>
+        <small>
+            {%- for tag in page.tags -%}
+                {{ tag }}
+                {%- unless forloop.last -%}
+                ,
+                {%- endunless -%}
+            {%- endfor -%}
+        </small>
+        </h2>
+    </div>
+
+    <div class="col-xs-12 col-md-2">
+
+        {%- assign sorted = site.notable_proj_collection | sort:"rough-start" -%}
+        {%- assign lastYear = sorted[0].rough-start | slice: 0, 4 -%}
+        <h3>{{lastYear}}</h3>
+        <div class="list-group">
+            {%- for item in sorted -%}
+                {%- assign theYear = item.rough-start | slice: 0, 4 -%}
+                {%- if lastYear < theYear -%}
+                    {%- assign lastYear = theYear -%}
+                    </ul>
+                    <h3>{{theYear}}</h3>
+                    <ul class="list-group">
+                {%- endif -%}
+
+                <a href="{{item.url}}" class="list-group-item
+                    {% if item == page %}
+                        active
+                    {%- endif -%}
+                ">{{item.title}}</a>
+            {%- endfor -%}
+        </div>
+
+    </div>
+</div>

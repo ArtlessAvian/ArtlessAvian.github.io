@@ -9,7 +9,6 @@
 
 body {
     position: relative;
-    line-height: 1.5
 }
 
 .jumbotron {
@@ -22,14 +21,4 @@ body {
 
 .well p {
     margin-bottom: 0px;
-}
-
-
-p {
-    font-size: 16px;
-    /* text-indent: 40px */
-}
-
-li {
-    font-size: 16px;
 }

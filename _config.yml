@@ -30,4 +30,5 @@ exclude:
   - Gemfile.lock
 
 collections:
-  - games_collection
+  notable_proj_collection:
+    output : true

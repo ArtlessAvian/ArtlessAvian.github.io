@@ -3,7 +3,11 @@ _site
 .sass-cache
 .jekyll-metadata
 
-_drafts
+_drafts/
+
+# temporary
+_games_collection/
+informal/
 
 # my stuff
 informal/old weird stuff/

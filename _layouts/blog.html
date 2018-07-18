@@ -2,9 +2,10 @@
 layout : default
 ---
 
-<div class="jumbotron text-center" role="alert">
-    <h1>Ryan Rambles for 12 Hours</h1>
+<div class="jumbotron text-center" style="margin-bottom: 0px">
+    <h1>Ryan Builds Up Articles for 12 Hours</h1>
 </div>
+{%- include navbar.html -%}
 
 <div class="container">
 
@@ -15,7 +16,7 @@ layout : default
             </h2>
         </div>
         <div class="col-md-4" style="text-align: right">
-            <h2>{{page.date | date: site.date-format}}</h3>
+            <h2>{{page.date | date: site.date-format}}</h2>
         </div>
     </div>
 

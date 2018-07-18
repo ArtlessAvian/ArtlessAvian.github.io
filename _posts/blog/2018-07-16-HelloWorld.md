@@ -1,15 +1,11 @@
 ---
-title : Highly Unresponsive
-linkid : highly-unresponsive
-github-name : highly-unresponsive
-description : to Prayers. Another Touhou Clone.
-images:
-videos:
+layout : blog
+title : Hello World!
+tags : heyo
+categories : blog
 ---
 
-# Frondem relaxant crescere
-
-## Direpta populus sortemque ignibus Cnosiacaeque seque ardent
+## Hello World!
 
 Lorem markdownum latus est timebant tria, me maturus consumptis. Vulnus et, **in
 spectat vocem**; saxea haec **licet** te **nata**, vestris. Inde nec cum cum qua
