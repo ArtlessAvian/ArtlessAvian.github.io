@@ -1,7 +1,7 @@
 ---
 layout : project
 title : Test Platformer
-github-name : 
+github-repo : 
 description : Proving A Point
 tags: 
 rough-start : 2015/08

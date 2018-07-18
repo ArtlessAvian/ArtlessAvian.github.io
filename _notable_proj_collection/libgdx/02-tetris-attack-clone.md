@@ -1,9 +1,10 @@
 ---
 layout : project
 title : Tetris Attack Clone
-github-name : tetris-attack-clone
+github-repo : tetris-attack-clone
 description : Destroying Someone Else's Project
-rough-start : 2016/12
+rough-start : 2016/01
+rough-end : 2016/12
 ---
 
 Lorem markdownum collo, dolore clarum figuras, mutari ore. Usu quatenus poenaque

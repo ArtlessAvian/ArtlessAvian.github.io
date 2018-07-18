@@ -75,11 +75,11 @@ tags : static
 
             {%- assign sorted = site.notable_proj_collection | sort:"rough-date" | reverse -%}
             {%- for post in sorted limit:6 -%}
-                {%- assign mod = forloop.index | modulo : 3 -%}
+                {%- assign mod = forloop.index | modulo : 2 -%}
                 {%- if mod == 1 -%}
                     <div class="row">
                 {%- endif -%}
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="well">
                         <h3><a href="{{post.url}}">{{post.title}}</a></h3>
                         {{post.extra-html}}

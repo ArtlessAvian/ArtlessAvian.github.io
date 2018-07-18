@@ -1,9 +1,10 @@
 ---
 layout : project
 title : Pseudo 3D
-github-name : pseudo-three-dee
+github-repo : pseudo-three-dee
 description : Billboards, Everywhere
 rough-start : 2016/02
+rough-end : 2016/03
 ---
 
 Lorem markdownum collo, dolore clarum figuras, mutari ore. Usu quatenus poenaque

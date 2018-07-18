@@ -25,6 +25,11 @@ layout : default
                         {{ page.rough-end | date: "%B %Y" }}
                     {%- endif -%}
                 </h2>
+                {%- if page.github-repo -%}
+                {%- assign github-link = page.github-repo | prepend : "https://github.com/ArtlessAvian/" -%}
+                    <a target="_blank" href="{{github-link}}">{{github-link}}</a> <br>
+                    <a target="_blank" href="{{github-link | append : "/network"}}" class="small">(Network graph)</a>
+                {%- endif -%}
             </div>
         </div>
     

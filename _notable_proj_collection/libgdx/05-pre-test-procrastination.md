@@ -1,10 +1,13 @@
 ---
 layout : project
 title : Pre-test Procrastination
-github-name : pre-test-procrastination
+github-repo : pre-test-procrastination
 description : Don't Wanna Take the ACT
 rough-start : 2016/06
+rough-end : 2016/08
 ---
+
+no git repo. maybe im polluting? why not.
 
 Lorem markdownum collo, dolore clarum figuras, mutari ore. Usu quatenus poenaque
 *lumina*, quas ad erat praestantior aethere animum? Dolor exstabant multis
