@@ -2,12 +2,12 @@
 layout : project
 title : Subpar Smash
 github-repo : subpar-smash
-description : blip blip
+description : When's Melee
 rough-start : 2016/01
 rough-end : 2017/01
 ---
 
-i deleted my repo once bc i did something dumb.
+My first project with a State Based Machine, essential to complex behavior.
 
 Lorem markdownum collo, dolore clarum figuras, mutari ore. Usu quatenus poenaque
 *lumina*, quas ad erat praestantior aethere animum? Dolor exstabant multis

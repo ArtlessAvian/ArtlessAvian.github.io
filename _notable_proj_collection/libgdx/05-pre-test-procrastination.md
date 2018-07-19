@@ -7,6 +7,8 @@ rough-start : 2016/06
 rough-end : 2016/08
 ---
 
+Big ideas and no plan got me nowhere. Also a prototype would have been good too.
+
 no git repo. maybe im polluting? why not.
 
 Lorem markdownum collo, dolore clarum figuras, mutari ore. Usu quatenus poenaque

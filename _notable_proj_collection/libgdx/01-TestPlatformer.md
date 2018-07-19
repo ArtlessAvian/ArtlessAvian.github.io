@@ -2,12 +2,13 @@
 layout : project
 title : Test Platformer
 github-repo : 
-description : Proving A Point
-tags: 
+description : Small Goal and Bad Code ==> Alright Product
+tags: platformer, 
 rough-start : 2015/08
 ---
 
-Lorem markdownum collo, dolore clarum figuras, mutari ore. Usu quatenus poenaque
-*lumina*, quas ad erat praestantior aethere animum? Dolor exstabant multis
-sorores; non orbem tecta sic odere nam quin utilis formamque et. Ibit concolor
-tristitiam danda; parvam desolatas colorum cognoscenda **nostri**.
+Virtual joysticks and buttons sometimes are awful. There's no haptic feedback that would be there with
+real joysticks and buttons. This project features an implementation that I suppose is alright.
+
+<!-- So there's me, a new game-dev, looking for an excuse to write a game. I was complaining (rightfully)
+that console games are hard to port to mobile. -->

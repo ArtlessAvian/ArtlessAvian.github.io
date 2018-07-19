@@ -84,7 +84,7 @@ tags : static
                         <h3><a href="{{post.url}}">{{post.title}}</a></h3>
                         {{post.extra-html}}
                         {{post.status}}
-                        <blockquote>{{post.excerpt | strip_html | truncatewords : 10}}</blockquote>
+                        <blockquote>{{post.excerpt | truncatewords : 10}}</blockquote>
                     </div>
                 </div>
                 {%- if mod == 0 -%}
@@ -132,7 +132,7 @@ tags : static
                 <div class="col-md-4">
                     <div class="well">
                         <h3><a href="{{post.url}}">{{post.title}}</a></h3>
-                        <blockquote>{{post.excerpt | strip_html | truncatewords : 10}}</blockquote>
+                        <blockquote>{{post.excerpt | truncatewords : 10}}</blockquote>
                         <p class="small">{{post.date | date: site.date-format}}</p>
                     </div>
                 </div>

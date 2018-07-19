@@ -49,13 +49,13 @@ layout : default
 
     <div class="col-xs-12 col-md-2">
 
-        {%- assign sorted = site.notable_proj_collection | sort:"rough-start" -%}
+        {%- assign sorted = site.notable_proj_collection | sort:"rough-start" | reverse -%}
         {%- assign lastYear = sorted[0].rough-start | slice: 0, 4 -%}
         <h3>{{lastYear}}</h3>
         <div class="list-group">
             {%- for item in sorted -%}
                 {%- assign theYear = item.rough-start | slice: 0, 4 -%}
-                {%- if lastYear < theYear -%}
+                {%- if lastYear != theYear -%}
                     {%- assign lastYear = theYear -%}
                     </ul>
                     <h3>{{theYear}}</h3>
