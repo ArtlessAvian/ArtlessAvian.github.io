@@ -5,6 +5,7 @@ github-repo : whats-an-airport
 description : Control Schemes are Hard
 rough-start : 2016/03
 rough-end : 2016/07
+status : Abandoned
 ---
 
 I used Dijkstra's algoritm in practice. For pushdown automata, I kinda messed up.

@@ -5,6 +5,7 @@ github-repo :
 description : Small Goal and Bad Code ==> Alright Product
 tags: platformer, 
 rough-start : 2015/08
+status : Completed
 ---
 
 Virtual joysticks and buttons sometimes are awful. There's no haptic feedback that would be there with

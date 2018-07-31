@@ -5,8 +5,8 @@ github-repo : final-lethal-league
 description : Game Concept Not Original
 rough-start : 2017/05
 # rough-start : 2017/05
-
-extra-html : <iframe class="img-responsive" src="https://www.youtube.com/embed/j8ESuW5rtmo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+status : Complete
+extra-html : <iframe src="https://www.youtube.com/embed/j8ESuW5rtmo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 ---
 
 My first feature complete game! A good conclusion to all I learned with LibGDX so far.

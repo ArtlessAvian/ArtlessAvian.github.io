@@ -5,6 +5,7 @@ github-repo : tetris-attack-clone
 description : Code Isn't Self-Explanitory
 rough-start : 2016/01
 rough-end : 2016/12
+status : Will Revisit
 ---
 
 I learned a hard lesson on contribution ettiqute. Communication and comments go a long way.

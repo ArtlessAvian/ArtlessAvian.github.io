@@ -6,6 +6,7 @@ description : The First of Many
 tags : bullet-hell very-early
 rough-start : 2015/04
 # rough-end : April 2015
+status : Abandoned
 ---
 
 My first project was small, lasting two days. Drawing sprites is an important first step, I guess.

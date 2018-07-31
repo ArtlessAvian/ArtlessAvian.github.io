@@ -4,4 +4,102 @@ title : Home
 tags : static
 ---
 
-Whats going on!
+<div style="height:66vh; padding:0; background-size:cover;
+        background-image: linear-gradient(rgba(34, 34, 34, 0.8), rgba(34, 34, 34, 0.8)),
+        url(assets/images/index/IMG_20180216_005326.jpg);">
+
+    <div style="padding-top:33vh"></div>
+
+    <div class="container" style="transform: translateY(-50%)">
+        <h1> Ryan C <small class="text-muted"> or ArtlessAvian </small> </h1>
+        <div class="jumbotron" style="padding-top: 2rem; padding-bottom: 2rem">
+            <h2>I write games, mostly.</h2>
+                <!-- Programming and&nbsp;
+                <span id="cool-thing" style="position:absolute">broken javascript. :/</span>
+                <span id="cool-thing2" style="position:absolute; overflow: hidden"></span> -->
+            <br>
+            <div>
+                <a class="btn btn-primary btn-lg" role="button" href="mailto:artlessavian@gmail.com">{% octicon mail %} Email</a>
+                <a class="btn btn-primary btn-lg" role="button" href="https://www.github.com/artlessavian">{% octicon mark-github %} Github</a>
+                
+                <script>
+                    // Yeesh!
+                    $(".octicon").attr("height", 22.6666)
+                    $(".octicon").attr("width", 22.6666)
+                    $(".octicon").css("transform", "translate(-2px, -2.3px)")
+                </script>
+                
+                <br>
+                More contact info later.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="padding-top:1rem"></div>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="page-header" id="about">
+                <!-- <h2 style="position: absolute; right: 0; transform: translateX(100%)">about</h2> -->
+                <h1 class="text-info">About Me</h1>
+            </div>
+            <p> <!-- Me, Academically -->
+                I have graduated from highschool, and am heading to college as a Computer Science major.
+
+                I've programmed since 2008, with guidance from my brothers. Otherwise, I am self-taught in Computer Science.
+                From the simple games I wrote in the third grade, to the hackathon winning team project that I led,
+                my skill has been accelerating to where it is now.
+                I am able to work on large projects and am writing amateur but complete games. 
+                <!-- insert project as in line links -->
+            </p><p>
+                Of the mainstream languages, I use Java the most, but I can also use Javascript and Python to about the same degree.
+                I am also looking to pick up C# or C++ soon. For game development, the type of project I spend most time on, I am
+                also picking up Godot Engine. I had been using LibGDX, a game oriented graphics library in Java.
+                <!-- The type of project I spend most time on is Game Development. -->
+            </p>
+        </div>
+        
+        <div class="col-md-12">
+            <div class="page-header" id="projects">
+                <h1 class="text-info">Projects <span class="h4">Section under construction!</span></h1>
+            </div>
+
+            <div class="container-fluid">
+                {%- assign sorted = site.notable_proj_collection | sort:"rough-date" | reverse -%}
+                {%- for post in sorted limit:6 -%}
+                    {%- assign mod = forloop.index | modulo : 3 -%}
+                    {%- if mod == 1 -%}
+                <div class="row">
+                    {%- endif -%}
+                    <div class="col-md-4">
+                        <div class="card" style="height:100%">
+
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <a href="{{post.url}}">{{post.title}}</a> <br>
+                                    <span class="badge badge-secondary">{{post.status}}</span>
+                                </h4>
+                                <p>
+                                    {{post.excerpt | truncatewords : 25}}
+                                </p>    
+                            </div>
+                        </div>
+                    </div>
+                    {%- if mod == 0 -%}
+                </div>
+                <div style="padding-top:1rem"></div>
+                    {%- endif -%}
+                {%- endfor -%}
+            </div>
+        </div>
+        
+        <div class="col-md-12">
+        </div>
+        
+        <div class="col-md-12">
+        </div>
+    </div>
+</div>
