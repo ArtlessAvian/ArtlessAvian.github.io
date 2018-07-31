@@ -4,6 +4,8 @@ title : Home
 tags : static
 ---
 
+{%- include navbar.html -%}
+
 <div style="height:66vh; padding:0; background-size:cover;
         background-image: linear-gradient(rgba(34, 34, 34, 0.8), rgba(34, 34, 34, 0.8)),
         url(assets/images/index/IMG_20180216_005326.jpg);">
@@ -14,23 +16,21 @@ tags : static
         <h1> Ryan C <small class="text-muted"> or ArtlessAvian </small> </h1>
         <div class="jumbotron" style="padding-top: 2rem; padding-bottom: 2rem">
             <h2>I write games, mostly.</h2>
-                <!-- Programming and&nbsp;
+            <!-- Programming and&nbsp;
                 <span id="cool-thing" style="position:absolute">broken javascript. :/</span>
                 <span id="cool-thing2" style="position:absolute; overflow: hidden"></span> -->
             <br>
             <div>
+                More contact info later.
+                <br>
                 <a class="btn btn-primary btn-lg" role="button" href="mailto:artlessavian@gmail.com">{% octicon mail %} Email</a>
                 <a class="btn btn-primary btn-lg" role="button" href="https://www.github.com/artlessavian">{% octicon mark-github %} Github</a>
-                
                 <script>
                     // Yeesh!
                     $(".octicon").attr("height", 22.6666)
                     $(".octicon").attr("width", 22.6666)
                     $(".octicon").css("transform", "translate(-2px, -2.3px)")
-                </script>
-                
-                <br>
-                More contact info later.
+                    </script>
             </div>
         </div>
     </div>
@@ -61,12 +61,12 @@ tags : static
                 <!-- The type of project I spend most time on is Game Development. -->
             </p>
         </div>
-        
+
         <div class="col-md-12">
             <div class="page-header" id="projects">
                 <h1 class="text-info">Projects <span class="h4">Section under construction!</span></h1>
             </div>
-
+            
             <div class="container-fluid">
                 {%- assign sorted = site.notable_proj_collection | sort:"rough-date" | reverse -%}
                 {%- for post in sorted limit:6 -%}
@@ -80,6 +80,7 @@ tags : static
                             <div class="card-body">
                                 <h4 class="card-title">
                                     <a href="{{post.url}}">{{post.title}}</a> <br>
+                                    <span class="badge badge-primary">{{post.rough-start | date: "%Y"}}</span>
                                     <span class="badge badge-secondary">{{post.status}}</span>
                                 </h4>
                                 <p>
@@ -95,11 +96,108 @@ tags : static
                 {%- endfor -%}
             </div>
         </div>
-        
+
         <div class="col-md-12">
+            <div class="page-header" id="languages">
+                <!-- <h2 style="position: absolute; right: 0; transform: translateX(100%)">about</h2> -->
+                <h1 class="text-info">My Programming Languages</h1>
+            </div>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Programming Language</th>
+                        <th>Used Libraries</th>
+                        <th>Projects</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Java</td>
+                        <td>LibGDX, Javacord</td>
+                        <td>
+                            {%- assign libgdx_projs = site.notable_proj_collection | where_exp: "item", "item.path contains 'libgdx'" -%}
+
+                            {%- for proj in libgdx_projs -%}
+                            {{proj.title}}
+                            <br>
+                            {%- endfor -%}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Javascript</td>
+                        <td>JQuery, AngularJS</td>
+                        <td>This Site!<br>"cool-looking-thing"<br>tetris-attack-clone</td>
+                    </tr>
+                    <tr>
+                        <td>GDScript</td>
+                        <td></td>
+                        <td>Subpar Trash<br>Parmpreet Fighter</td>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                        <td></td>
+                        <td>Minor Scripting</td>
+                    </tr>
+                    <tr>
+                        <td>Pascal (really old!!!)</td>
+                        <td></td>
+                        <td>Raycaster<br>Pong<br>Physics Platformer</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-md-12">
+            <div class="page-header" id="education">
+                <h1 class="text-info">Education Summary</h1>
+            </div>
+            <h3>AP Testing <span class="h4 text-muted">National AP Scholar</span></h3>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Score</th>
+                        <th>Year Taken</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%- for test in site.data.my_ap_tests -%}
+                    <tr>
+                        <td>{{test.name}}</td>
+                        <td>{{test.score}}</td>
+                        <td>{{test.year}}</td>
+                    </tr>
+                    {%- endfor -%}
+                </tbody>
+            </table>
         </div>
         
         <div class="col-md-12">
+            <div class="page-header" id="blog">
+                <h1 class="text-info">Pseudo-Blog</h1>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    {%- for post in site.categories.blog limit:3 -%}
+                    <div class="col-md-4">
+                        <!-- <div class="well">
+                            <h3><a href="{{post.url}}">{{post.title}}</a></h3>
+                        </div> -->
+                        
+                        <div class="card" style="height:100%">
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <a href="{{post.url}}">{{post.title}}</a> <br>
+                                </h4>
+                                {{post.excerpt | truncatewords : 25}}
+                                <p class="small">{{post.date | date: site.date-format}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {%- endfor -%}
+                </div>
+            </div>
         </div>
     </div>
 </div>

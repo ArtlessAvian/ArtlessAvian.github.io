@@ -5,7 +5,7 @@ github-repo : final-lethal-league
 description : Game Concept Not Original
 rough-start : 2017/05
 # rough-start : 2017/05
-status : Complete
+status : Completed
 extra-html : <iframe src="https://www.youtube.com/embed/j8ESuW5rtmo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 ---
 

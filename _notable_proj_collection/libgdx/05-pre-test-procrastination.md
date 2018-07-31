@@ -1,6 +1,6 @@
 ---
 layout : project
-title : Pre-test Procrastination
+title : Pre-testing Procrastination
 github-repo : pre-test-procrastination
 description : Don't Wanna Take the ACT
 rough-start : 2016/06

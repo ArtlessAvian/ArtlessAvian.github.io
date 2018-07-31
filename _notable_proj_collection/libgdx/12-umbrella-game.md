@@ -5,7 +5,7 @@ github-repo : umbrella-game
 description : Winner Winner Chicken Dinner
 rough-start : 2017/10
 # rough-end : 2017/10
-status: Complete
+status: Completed
 extra-html : <iframe src="https://www.youtube.com/embed/P9tygC5jBfw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 ---
 

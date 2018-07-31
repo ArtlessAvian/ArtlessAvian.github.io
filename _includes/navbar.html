@@ -13,3 +13,20 @@
         {%- endfor -%}
     </ul>
 </nav>  -->
+
+<ul class="nav">
+    {%- assign home_url = "/index.html" | relative_url -%}
+    <li class="nav-item">
+        <a class="nav-link" href="{{home_url}}">Home</a>
+    </li>
+    {%- for entry in site.html_pages -%}
+        {%- if entry.title == 404 %}
+            {%- continue -%}
+        {%- elsif entry.title == "Home" %}
+            {%- continue -%}
+        {%- endif -%}
+    <li class="nav-item">
+        <a class="nav-link" href="{{entry.url}}">{{entry.title}}</a>
+    </li>
+    {%- endfor -%}
+</ul> 

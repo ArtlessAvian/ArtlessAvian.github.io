@@ -1,3 +1,6 @@
+- name: 'Computer Science A'
+  score: 5
+  year: 2017
 
 - name: 'Calculus BC'
   score: 5
