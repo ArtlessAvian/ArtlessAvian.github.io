@@ -1,18 +1,18 @@
 
 var messages = [
-    "competitive Super Smash Bros!",
-    "improving bad posture!",
-    "constructing additional pylons!",
-    "BOOM. Tetris for Jeff!",
-    "reinventing the wheel!",
-    "grandmaster level calculator APM!",
-    "mostly competent gamedev!",
-    "taking redstone too seriously!",
-    "awful webdev!",
-    "poor color schemes!"
+    // "competitive Super Smash Bros!",
+    // "constructing additional pylons!",
+    // "BOOM. Tetris for Jeff!",
+    // "reinventing the wheel!",
+    // "grandmaster level calculator APM!",
+    "junior gamedev!"
+    // "taking redstone too seriously!",
+    // "novice webdev!"
+    // "poor color schemes!"
 ]
 
 var period = 7000;
+// period = 000000
 var swooce_offset = 6600;
 
 var help_lerp = function(t, a)
@@ -60,7 +60,7 @@ var trueResize = function()
     // probably because uhh... magic.
     $("#stickyNav").attr("data-offset-top", window.innerHeight + 52);
 
-    $("#hipsterThing").css("padding-top", (window.innerHeight/2 - 160) + "px");
+    $("#hipsterThing").css("padding-top", ((window.innerHeight - 309.3)/2) + "px");
 }
 
 var fakeResize = function()
