@@ -9,7 +9,7 @@ layout : default
 
 <div class="container"> <div class="row">
 
-    <div class="col-xs-12 col-md-10 order-1">
+    <div class="col-xs-12 col-md-10">
 
         <div class="card card-body" style="margin:1.25rem">
             <div class="row">
@@ -51,7 +51,8 @@ layout : default
     </div>
 
     <!-- Other Articles -->
-    <div class="col-xs-12 col-md-2 order-12">
+    <!-- TODO: Make years into collapsable menus -->
+    <div class="col-xs-12 col-md-2">
 
         {%- assign sorted = site.notable_proj_collection | sort:"rough-start" | reverse -%}
         {%- assign lastYear = sorted[0].rough-start | slice: 0, 4 -%}
