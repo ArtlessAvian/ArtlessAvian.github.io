@@ -21,7 +21,7 @@ var translateThing = function(now, start)
 var doAnimation = function(start, lastRun)
 {
     now = Date.now()    
-    $("#cool-flair").css("transform", "translateX(" + (100 - translateThing(now, start) * 100) + "%)");
+    $("#cool-flair").css("transform", "translateY(" + (100 - translateThing(now, start) * 100) + "%)");
     $("#cool-flair").css("opacity", translateThing(now, start));
     
     if ((lastRun - start - ANIMATION_TIME/2) * (now - start - ANIMATION_TIME/2) <= 0)
