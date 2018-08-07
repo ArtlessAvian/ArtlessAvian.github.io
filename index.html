@@ -4,6 +4,8 @@ title : Home
 tags : static
 ---
 
+<link rel="stylesheet" href="assets/css/index.css">
+
 <div style="height:66vh; padding:0; background-size:cover;
         background-image: linear-gradient(rgba(34, 34, 34, 0.8), rgba(34, 34, 34, 0.8)),
         url(assets/images/index/IMG_20180216_005326.jpg);">
@@ -11,30 +13,40 @@ tags : static
     <div style="padding-top:33vh"></div>
 
     <div class="container" style="transform: translateY(-50%)">
-        <h1> Ryan C <small class="text-muted"> or ArtlessAvian </small> </h1>
+
+        <style>@media (min-width: 768px) {#aaaaa {float: right}}</style>
+        <h1> Ryan C <span id="aaaaa"> aka ArtlessAvian </span></h1>
+
         <div class="jumbotron" style="padding-top: 2rem; padding-bottom: 2rem">
-            <h2>I write games, mostly.</h2>
-            <!-- Programming and&nbsp;
-                <span id="cool-thing" style="position:absolute">broken javascript. :/</span>
-                <span id="cool-thing2" style="position:absolute; overflow: hidden"></span> -->
-            <br>
-            <div>
-                More contact info later.
-                <br>
-                <a class="btn btn-primary btn-lg" role="button" href="mailto:artlessavian@gmail.com">{% octicon mail %} Email</a>
-                <a class="btn btn-primary btn-lg" role="button" href="https://www.github.com/artlessavian">{% octicon mark-github %} Github</a>
-                <script>
-                    // Yeesh!
-                    $(".octicon").attr("height", 22.6666)
-                    $(".octicon").attr("width", 22.6666)
-                    $(".octicon").css("transform", "translate(-2px, -2.3px)")
-                    </script>
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <h2>
+                        I write games, mostly.
+                    </h2>
+                    
+                    <div>
+                        <a class="btn btn-primary btn-lg" role="button" href="mailto:artlessavian@gmail.com">{% octicon mail %} Email</a>
+                        <a class="btn btn-primary btn-lg" role="button" href="https://www.github.com/artlessavian">{% octicon mark-github %} Github</a>
+                        <script>
+                            // Yeesh!
+                            $(".octicon").attr("height", 22.6666)
+                            $(".octicon").attr("width", 22.6666)
+                            $(".octicon").css("transform", "translate(-2px, -2.3px)")
+                            </script>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 d-none d-md-block">
+                    <h3 id="cool-flair" class="text-muted" style="height: 100%; text-align:right; margin-top: 9.6px; overflow: hidden">
+                        and write broken javascript. :/
+                    </h3>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-{%- include navbar.html -%}
+{%- include navbar-centered.html -%}
 <div style="padding-top:1rem"></div>
 
 <div class="container">
@@ -200,3 +212,5 @@ tags : static
         </div>
     </div>
 </div>
+
+<script src="js/index.js"></script>
