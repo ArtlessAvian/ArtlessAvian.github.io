@@ -1,0 +1,234 @@
+---
+layout : default
+title : Home
+tags : static
+---
+
+<link href="assets/css/index.css" rel="stylesheet">
+<script src="js/index.js"></script>
+
+<div id="home" class="jumbotron"
+    style="height:100vh; padding:0; background-size:cover;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1)),
+    url(assets/images/index/IMG_20180216_005326.jpg);">
+    
+    <div class="container-fluid">
+        <div class="col-md-6 col-md-offset-3" id="hipsterThing" style="padding-top: 0%">
+            <h1> ArtlessAvian <small> or Ryan </small> </h1>
+            <div class="well">
+                <h2>
+                    Programming and&nbsp;
+                    <span id="cool-thing" style="position:absolute">broken javascript. :/</span>
+                    <span id="cool-thing2" style="position:absolute; overflow: hidden">a</span>
+                </h2>
+                <br>
+                <div style="font-size:24px; padding-top: 10px">
+                    More contact info later.
+                    <br>
+                    <a href="mailto:artlessavian@gmail.com"><span class="glyphicon glyphicon-envelope"></span> Email</a> |
+                    <a href="https://www.github.com/artlessavian"><span class="glyphicon glyphicon-hdd"></span> Github</a>
+                </div>
+            </div>
+
+            <a class="text-center" href="#navbar">
+                <span class="center-block glyphicon glyphicon-triangle-bottom"></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+{%- include navbar.html -%}
+
+<div class="container" data-spy="scroll" data-target="#spyNav">
+    <div class="row">
+
+        <div class="col-md-10">
+
+            <div class="page-header" id="about">
+                <h1>About Me</h1>
+            </div>
+            <p> <!-- Me, Academically -->
+                I have graduated from highschool, and am heading to college as a Computer Science major.
+
+                I've programmed since 2008, with guidance from my brothers. Otherwise, I am self-taught in Computer Science.
+                From the simple games I wrote in the third grade, to the hackathon winning team project that I led,
+                my skill has been accelerating to where it is now.
+                I am able to work on large projects and am writing amateur but complete games. 
+                <!-- insert project as in line links -->
+            </p><p>
+                Of the mainstream languages, I use Java the most, but I can also use Javascript and Python to about the same degree.
+                I am also looking to pick up C# or C++ soon. For game development, the type of project I spend most time on, I am
+                also picking up Godot Engine. I had been using LibGDX, a game oriented graphics library in Java.
+                <!-- The type of project I spend most time on is Game Development. -->
+            </p><p> <!-- Kinda Academically -->
+                <!-- My other academic interests are Physics and Math; the highest classes I've reached in highschool is
+                AP Physics C, AP Calculus BC, and AP Statistics. -->
+                <!-- too specific? -->
+                <!-- I had been using LibGDX, which is best described as a game oriented graphics framework.
+                By using it, I had to write game engines from scratch. While not conducive to creating finished products,
+                it helped me understand the mechanics and design behind a game engine.
+                Now, I use Godot Engine. While it has nontraditional paradigms, it should be general and functional enough
+                for me to use. -->
+            </p><p> <!-- The Rest -->
+                <!-- Lastly, I am a Mandarin speaker, to an elementary degree. -->
+            </p>
+
+            <div class="page-header" id="projects">
+                <h1>Projects <small>Section under construction!</small></h1>
+            </div>
+
+            {%- assign sorted = site.notable_proj_collection | sort:"rough-date" | reverse -%}
+            {%- for post in sorted limit:6 -%}
+                {%- assign mod = forloop.index | modulo : 2 -%}
+                {%- if mod == 1 -%}
+                    <div class="row">
+                {%- endif -%}
+                <div class="col-md-6">
+                    <div class="well">
+                        <h3><a href="{{post.url}}">{{post.title}}</a></h3>
+                        {{post.extra-html}}
+                        {{post.status}}
+                        <blockquote>{{post.excerpt | truncatewords : 10}}</blockquote>
+                    </div>
+                </div>
+                {%- if mod == 0 -%}
+                    </div>
+                {%- endif -%}
+            {%- endfor -%}
+
+            <!-- <div class="col-md-4">
+                    <div class="well">
+                        <h3>RECENT:<br>Subpar Trash</h3>
+                        <img src="res/index/subpar-trash.PNG" class="img-responsive">
+                        <p>
+                            Currently, I am trying to write an engine for a Smash Brothers like game, hence the title.
+                            I plan to open source the engine, and write a game closed source.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">        
+                    <div class="well">
+                        <h3>NOTABLE:<br>Runbrella</h3>
+                        <iframe class="img-responsive" src="https://www.youtube.com/embed/P9tygC5jBfw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <p>
+                            I wrote this hot garbage in 24 hours in a hackathon. I didn't expect to win, so I used it
+                            as an opportunity to show my fellow officers in our CS club team work. It won anyways, somehow.
+                            FUN FACT: It also runs on phones.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="well">
+                        <h3>NOTABLE:<br>final-lethal-league</h3>
+                        <iframe class="img-responsive" src="https://www.youtube.com/embed/j8ESuW5rtmo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <p>
+                            Wowee. Final project for APCS, by overqualified nerds. Another team project I led,
+                            with two other Ryans. It's the most complete project or game I have ever made. It's legitimately good.
+                        </p>
+                    </div>
+                </div> -->
+            
+            <div class="page-header" id="blog">
+                <h1>Pseudo-Blog</h1>
+            </div>
+            <div class="row">
+            {%- for post in site.categories.blog limit:3 -%}
+                <div class="col-md-4">
+                    <div class="well">
+                        <h3><a href="{{post.url}}">{{post.title}}</a></h3>
+                        <blockquote>{{post.excerpt | truncatewords : 10}}</blockquote>
+                        <p class="small">{{post.date | date: site.date-format}}</p>
+                    </div>
+                </div>
+            {%- endfor -%}
+            </div>
+
+
+            <div class="page-header" id="education">
+                <h1>Education</h1>
+            </div>
+            <h3> AP Testing </h3>
+            <p> AP Scholar with Honor</p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Score</th>
+                        <th>Year Taken</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {%- for test in site.data.my_ap_tests -%}
+                    <tr>
+                        <td>{{test.name}}</td>
+                        <td>{{test.score}}</td>
+                        <td>{{test.year}}</td>
+                    </tr>
+                {%- endfor -%}
+                </tbody>
+            </table>
+
+            <!-- <ul>
+                <li>High School Graduate</li>
+                <li>Heading to college</li>
+            </ul> -->
+
+            <div class="page-header" id="skills">
+                <h1>Skills</h1>
+            </div>
+
+            <div class="alert alert-info">
+                <strong>Some of this may be subjective.</strong> Not all of it is, though. I'll try to keep it objective.
+            </div>
+
+            (Maybe I should be showing, not telling. TODO)
+
+            <h3>Programming and Computer Science</h3>
+            <p>        
+                I have moderate experience with algorithms
+                (Time Complexity, Master Method, Designing Greedy Algorithms)
+                and data structures (Types, Usages, Associated Time Complexities) <!--, both with intuitive understanding -->.
+                I have touched multi-threading, but have never used it in a project.
+                I have some experience in software design (MVC, Observer Pattern, State Pattern), and am currently working to improve it.
+                I can learn libraries, APIs and frameworks.
+            </p><p>
+                <!-- I have looked into Machine Learning, and know of basic implementations and use cases. I have not written an implementation,
+                nor used it in a project. -->
+            <!-- </p><p> -->
+                I have looked into Webdev. This site is written by me!
+            </p>
+            <h3>Other STEM</h3>
+            <p>
+                I try to learn math for intuitive understanding.
+                <!-- I have been awarded "best Physics student" in my graduating class. -->
+                <!-- I think, unless I am VERY mistaken. -->
+            </p>
+            <!-- <h3>Other Arts</h3>
+            <p>
+                I can do basic video editing and photo editing, with passing interest.
+            </p> -->
+
+            <!-- <div class="page-header" id="links">
+                <h1>Lorem Ipsum (haha TODO)</h1>
+            </div>
+            <p>
+                Duis tempor est ac feugiat finibus. Duis hendrerit, nisi porta consequat condimentum, purus quam dapibus arcu, ut consequat dolor justo sit amet ante. Morbi facilisis dignissim tellus congue finibus. Ut tortor felis, laoreet at semper eu, laoreet non nisi. Morbi aliquam dui sit amet diam aliquam, ac ornare urna bibendum. Maecenas congue, arcu quis eleifend ornare, nibh massa rhoncus diam, auctor pulvinar nibh lectus sit amet lacus. Cras vitae ante justo. Sed aliquet mauris eget lacus placerat iaculis. Sed maximus placerat ornare. Curabitur suscipit dignissim metus, ut interdum purus tincidunt id. Phasellus sed tincidunt est. Nam vitae lectus consequat, pretium felis id, efficitur sapien. Suspendisse sit amet ligula non mi eleifend dapibus a ut massa. Cras varius nisi vel dictum vestibulum. Nullam sed sapien sed enim cursus tempus vitae nec dui. Pellentesque tristique, dolor vel condimentum vulputate, mi eros ultrices mi, quis molestie nisl odio dictum diam.
+                Mauris ultrices nulla nec diam laoreet tristique. Pellentesque convallis elit tortor, a efficitur velit placerat porttitor. Praesent dapibus odio libero, in vehicula ipsum tincidunt in. Ut pretium risus a nisi pharetra, malesuada dignissim sapien semper. Suspendisse at augue id urna rutrum accumsan. Aliquam varius maximus lorem et condimentum. Duis fringilla ultricies auctor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            </p> -->
+        </div>
+
+        <div class="col-xs-12 col-md-2">
+            <ul class="nav nav-pills nav-stacked" id="stickyNav" data-spy="affix" data-offset-top="990">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#blog">Pseudo-Blog</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <!-- <li><a href="#links">Links</a></li> -->
+                <!-- <li><a href="#links">Menu 3</a></li> -->
+            </ul>
+        </div>
+
+    </div>
+</div>

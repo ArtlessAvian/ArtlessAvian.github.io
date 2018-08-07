@@ -5,21 +5,28 @@ layout : default
 <div class="jumbotron text-center" style="margin-bottom: 0px">
     <h1>Ryan Builds Up Articles for 12 Hours</h1>
 </div>
-{%- include navbar.html -%}
+{%- include navbar-centered.html -%}
 
+<!-- TODO: Figure out of the Project layout can be used here, or the other way around -->
 <div class="container">
 
-    <div class="well row">
-        <div class="col-md-8">
-            <h2>
-                {{page.title}}
-            </h2>
-        </div>
-        <div class="col-md-4" style="text-align: right">
-            <h2>{{page.date | date: site.date-format}}</h2>
-        </div>
-    </div>
+    <!-- <div class="col-xs-12 col-md-10"> -->
 
-    {{ content }}
+        <div class="card card-body" style="margin: 15px">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>
+                        {{page.title}}
+                    </h2>
+                </div>
+                <div class="col-md-4" style="text-align: right">
+                    <h2>{{page.date | date: site.date-format}}</h2>
+                </div>
+            </div>
+        </div>
+        
+        {{ content }}
+
+    <!-- </div> -->
 
 </div>

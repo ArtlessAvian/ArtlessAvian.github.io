@@ -5,11 +5,12 @@ github-repo : raycast-engine-js
 description : Weird Trig Shenanigans
 rough-start : 2016/12
 # rough-end : 2016/12
+status : Superseded
 ---
 
 I've made this in Pascal. Recreated the magic, but not well. I blame Javascript.
 
-Superceded by cool-looking-thing
+Superseded by cool-looking-thing
 
 Lorem markdownum collo, dolore clarum figuras, mutari ore. Usu quatenus poenaque
 *lumina*, quas ad erat praestantior aethere animum? Dolor exstabant multis

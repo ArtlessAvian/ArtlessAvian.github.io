@@ -21,6 +21,7 @@ date-format: "%b %-d, %Y"
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-octicons
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
