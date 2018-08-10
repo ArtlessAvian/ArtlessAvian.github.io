@@ -91,6 +91,14 @@ tags : static
                                     <span class="badge badge-primary">{{post.rough-start | date: "%Y"}}</span>
                                     <span class="badge badge-secondary">{{post.status}}</span>
                                 </h4>
+                        
+                        {%- if post.playable -%}
+                            <a class="btn btn-primary" href="{{post.playable}}">Play it Now!</a>
+                        {%- endif -%}
+                        {%- if post.downloadable -%}
+                            <a class="btn btn-secondary" href="{{post.downloadable}}">Download it Here</a>
+                        {%- endif -%}
+
                                 <p>
                                     {{post.excerpt | truncatewords : 25}}
                                 </p>    
