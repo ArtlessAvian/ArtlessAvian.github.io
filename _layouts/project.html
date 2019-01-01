@@ -29,10 +29,17 @@ layout : default
                     <h4 class="col-md-6"><small>{{page.description}}</small></h4>
                 <div class="col-md-6" style="text-align: right">
                 {%- if page.github-repo -%}
+                {%- if page.playable -%}
+                    <a class="btn btn-primary" href="{{page.playable}}">Play it Now!</a>
+                {%- endif -%}
+                {%- if page.downloadable -%}
+                    <a class="btn btn-secondary" href="{{page.downloadable}}">Download it Here</a>
+                {%- endif -%} <br>
                 {%- assign github-link = page.github-repo | prepend : "https://github.com/ArtlessAvian/" -%}
                     <a target="_blank" href="{{github-link}}">Github Repo</a>
                     <a target="_blank" href="{{github-link | append : "/network"}}" class="small">(Network graph)</a>
                 {%- endif -%}
+
                 </div>
             </div>
         </div>

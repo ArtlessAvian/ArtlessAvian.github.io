@@ -8,4 +8,4 @@ rough-end : 2017/02
 status : Completed
 ---
 
-Not everything needs seperate model, view, and controller. The view portion, was pretty glorious though.
+Not everything needs seperate model, view, and controller. The view portion was pretty glorious though.

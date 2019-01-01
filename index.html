@@ -55,10 +55,10 @@ tags : static
                 <h1 class="text-info">About Me</h1>
             </div>
             <p> <!-- Me, Academically -->
-                I have graduated from highschool, and am heading to college as a Computer Science major.
+                I am a Computer Science major!
 
                 I've programmed since 2008, with guidance from my brothers. Otherwise, I am self-taught in Computer Science.
-                From the simple games I wrote in the third grade, to the hackathon winning team project that I led,
+                From the simple games I wrote in the third grade, to the runner-up hackathon project that I led in 2018,
                 my skill has been accelerating to where it is now.
                 I am able to work on large projects and am writing amateur but complete games. 
                 <!-- insert project as in line links -->
@@ -75,8 +75,12 @@ tags : static
                 <h1 class="text-info">Projects <span class="h4">Section under construction!</span></h1>
             </div>
             
-            <div class="container-fluid">
-                {%- assign sorted = site.notable_proj_collection | sort:"rough-date" | reverse -%}
+            <div class="container-fluid">    
+                <div class="page-header">
+                    <h4 class="text-warning text-center">Best Projects</h4>
+                </div>
+                
+                {%- assign sorted = site.notable_proj_collection | sort:"significance" | reverse -%}
                 {%- for post in sorted limit:6 -%}
                     {%- assign mod = forloop.index | modulo : 3 -%}
                     {%- if mod == 1 -%}
@@ -111,6 +115,47 @@ tags : static
                     {%- endif -%}
                 {%- endfor -%}
             </div>
+
+            <div class="container-fluid">
+                <div class="page-header">
+                    <h4 class="text-warning text-center">Most Recent Projects</h4>
+                </div>
+                {%- assign sorted = site.notable_proj_collection | sort:"rough-start" | reverse -%}
+                {%- for post in sorted limit:3 -%}
+                    {%- assign mod = forloop.index | modulo : 3 -%}
+                    {%- if mod == 1 -%}
+                <div class="row">
+                    {%- endif -%}
+                    <div class="col-md-4">
+                        <div class="card" style="height:100%">
+
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <a href="{{post.url}}">{{post.title}}</a> <br>
+                                    <span class="badge badge-primary">{{post.rough-start | date: "%Y"}}</span>
+                                    <span class="badge badge-secondary">{{post.status}}</span>
+                                </h4>
+                        
+                        {%- if post.playable -%}
+                            <a class="btn btn-primary" href="{{post.playable}}">Play it Now!</a>
+                        {%- endif -%}
+                        {%- if post.downloadable -%}
+                            <a class="btn btn-secondary" href="{{post.downloadable}}">Download it Here</a>
+                        {%- endif -%}
+
+                                <p>
+                                    {{post.excerpt | truncatewords : 25}}
+                                </p>    
+                            </div>
+                        </div>
+                    </div>
+                    {%- if mod == 0 -%}
+                </div>
+                <div style="padding-top:1rem"></div>
+                    {%- endif -%}
+                {%- endfor -%}
+            </div>
+
         </div>
 
         <div class="col-md-12">
