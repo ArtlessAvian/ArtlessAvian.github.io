@@ -1,0 +1,33 @@
+#margin-delet {
+    margin-bottom: 0
+}
+
+#margin-delet * {
+    margin-bottom: 0
+}
+
+@media (min-width: 768px)
+{
+    #jumbo-title {
+        line-height: 0;
+        transform: translateY(-1.3em)
+    }
+}
+
+@media (max-width: 768px)
+{
+    #jumbo-title {
+        padding-bottom: 2rem
+    }
+}
+
+.octicon {
+    transform: translateY(-3px)
+}
+
+.vertical-line-flex {
+    border-left: 5px gray;
+    border-left-style: solid;
+    margin-left: 5px;
+    margin-right: 5px
+}
