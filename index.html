@@ -6,42 +6,50 @@ tags : static
 
 <link rel="stylesheet" href="assets/css/index.css">
 
-<div style="height:66vh; padding:0; background-size:cover;
+<!-- <div style="height:66vh; padding:0; background-size:cover;
         background-image: linear-gradient(rgba(34, 34, 34, 0.8), rgba(34, 34, 34, 0.8)),
-        url(assets/images/index/IMG_20180216_005326.jpg);">
+        url(assets/images/index/IMG_20180216_005326.jpg);"> -->
 
-    <div style="padding-top:33vh"></div>
+    <!-- <div style="padding-top:33vh"></div> -->
 
-    <div class="container" style="transform: translateY(-50%)">
+<div class="container"> <!-- style="transform: translateY(-50%)"> -->
 
-        <style>@media (min-width: 768px) {#aaaaa {float: right}}</style>
-        <h1> Ryan C <span id="aaaaa"> aka ArtlessAvian </span></h1>
+    <div class="py-3"></div>
+    <style>@media (min-width: 768px) {#aaaaa {float: right}}</style>
+    <h1> Ryan C <span id="aaaaa"> aka ArtlessAvian </span></h1>
 
-        <div class="jumbotron" style="padding-top: 2rem; padding-bottom: 2rem">
-            <h2>
-                I write games, mostly.
-            </h2>
-            
-            <div>
-                <a class="btn btn-primary btn-lg" role="button" href="mailto:artlessavian@gmail.com">{% octicon mail %} Email</a>
-                <a class="btn btn-primary btn-lg" role="button" href="https://www.github.com/artlessavian">{% octicon mark-github %} Github</a>
-                <script>
-                    // Yeesh!
-                    $(".octicon").attr("height", 22.6666)
-                    $(".octicon").attr("width", 22.6666)
-                    $(".octicon").css("transform", "translate(-2px, -2.3px)")
-                    </script>
-            </div>
+    <div class="jumbotron" style="padding-top: 2rem; padding-bottom: 2rem">
+        <h3>
+            Computer Science Undergrad Writing Games
+        </h3>
+        <p>
+            As of last update (Aug 23, 2019), I am a rising sophomore at UCI, studying Computer Science.
+        </p>
+        <p>
+            Programming languages I am currently using are Python and C#, but I can also use Java, C++, Javascript, and more. 
+            I can use the game engines Godot and Unity. I have also used LibGDX and Ashley, notable for being an Entity Component System.
+            (I really like ECS/DOD!)
+        </p>
+
+        <div>
+            <a class="btn btn-primary btn-lg" role="button" href="mailto:artlessavian@gmail.com">{% octicon mail %} Email</a>
+            <a class="btn btn-primary btn-lg" role="button" href="https://www.github.com/artlessavian">{% octicon mark-github %} Github</a>
+            <script>
+                // Yeesh!
+                $(".octicon").attr("height", 22.6666)
+                $(".octicon").attr("width", 22.6666)
+                $(".octicon").css("transform", "translate(-2px, -2.3px)")
+                </script>
         </div>
     </div>
-    
-    <!-- Outside of centering div to prevent shifting of elements -->
-    <div style="position:absolute; top: 66vh; left:50vw; transform: translate(-50%, -100%); overflow:hidden">    
-        <h3 id="cool-flair" style="text-align:center">
-            and write broken javascript. :/
-        </h3>
-    </div>
 </div>
+    
+<!-- Outside of centering div to prevent shifting of elements -->
+<!-- <div style="position:absolute; top: 66vh; left:50vw; transform: translate(-50%, -100%); overflow:hidden">    
+    <h3 id="cool-flair" style="text-align:center">
+        and write broken javascript. :/
+    </h3>
+</div> -->
 
 {%- include navbar-centered.html -%}
 <div style="padding-top:1rem"></div>
