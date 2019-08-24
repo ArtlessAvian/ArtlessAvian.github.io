@@ -1,4 +1,4 @@
-#margin-delet {
+/* #margin-delet {
     margin-bottom: 0
 }
 
@@ -8,18 +8,29 @@
 
 @media (min-width: 768px)
 {
-    #jumbo-title {
+    /#jumbo-title {
         line-height: 0;
-        transform: translateY(-1.3em)
+        transform: translateY(-1.2em)
     }
 }
 
 @media (max-width: 768px)
 {
     #jumbo-title {
-        padding-bottom: 2rem
+        padding-bottom: 1.5rem
     }
-}
+ 
+    #fullheight-background {
+        height:90vh;
+        padding:0;
+        background-size: cover;
+        background-image: linear-gradient(rgba(34, 34, 34, 0.8), rgba(34, 34, 34, 0.8)), url({{page.background}});
+    }
+
+    #fullheight-content {
+        transform: translateY(-50%);
+    }
+} */
 
 .octicon {
     transform: translateY(-3px)

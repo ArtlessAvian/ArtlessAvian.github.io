@@ -27,5 +27,5 @@ plugins:
 collections:
   - images
 
-gems:
+plugins:
   - jekyll-octicons
