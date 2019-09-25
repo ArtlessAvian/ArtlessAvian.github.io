@@ -1,7 +1,7 @@
 ---
 layout : project
 title : Runbrella
-github-repo : umbrella-game
+github-repo : https://github.com/ArtlessAvian/umbrella-game
 description : Winner Winner Chicken Dinner
 rough-start : 2017/10
 # rough-end : 2017/10

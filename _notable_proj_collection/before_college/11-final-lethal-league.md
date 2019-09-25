@@ -1,7 +1,7 @@
 ---
 layout : project
 title : Final Lethal League
-github-repo : final-lethal-league
+github-repo : https://github.com/ArtlessAvian/final-lethal-league
 description : Game Concept Not Original
 rough-start : 2017/05
 # rough-start : 2017/05
