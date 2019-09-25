@@ -6,6 +6,7 @@ description : Competitor Project to Ballistic
 rough-start : 2019/01
 status : Completed
 playable : https://johantan.itch.io/can-balls-meow
+significance : 2
 ---
 
 In UCI's VGDC club, everyone who was not accepted to a pitched project gets placed on a Wildcard Team,
