@@ -1,0 +1,2 @@
+{% assign this_repo = site.github.public_repositories | where:"name", site.github.repository_name | first %}
+Last update: {{this_repo.updated_at}}

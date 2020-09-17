@@ -5,31 +5,13 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-title: artlessavian.github.io
+title: Ryan Chang
 email: artlessavian@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Some guy who pretends to write games.
+description:
+  Website for Ryan, aka ArtlessAvian.
 baseurl: ""
 url: "artlessavian.github.io"
 
-# twitter_username: jekyllrb
-github_username:  artlessavian
+repository: artlessavian/artlessavian.github.io
 
-date-format: "%b %-d, %Y"
-
-# Build settings
-markdown: kramdown
-plugins:
-  - jekyll-feed
-  - jekyll-octicons
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-exclude:
-  - Gemfile
-  - Gemfile.lock
-
-collections:
-  notable_proj_collection:
-    output : true
+theme: jekyll-theme-modernist

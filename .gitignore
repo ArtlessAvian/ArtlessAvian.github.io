@@ -1,17 +1,5 @@
-# jekyll's stuff
 _site
 .sass-cache
 .jekyll-metadata
 
 _drafts/
-
-# temporary
-_games_collection/
-informal/
-
-# my stuff
-informal/old weird stuff/
-.idea/
-informal/res/boi.PNG
-*.xcf
-res/test
