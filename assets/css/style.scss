@@ -2,3 +2,19 @@
 ---
 
 @import "{{ site.theme }}";
+
+@media print, screen and (min-width: 740px)
+{
+    // From https://stackoverflow.com/a/25036868
+    // I could be a better webdev haha.
+
+    .hover-zoom {
+        transition:transform 0.25s ease;
+    }
+
+    .hover-zoom:hover {
+        -webkit-transform:scale(1.5);
+        transform:scale(1.5);
+        z-index: 5;
+    }
+}
