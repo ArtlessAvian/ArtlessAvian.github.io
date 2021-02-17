@@ -3,7 +3,7 @@ layout: default
 title: Portfolio
 ---
 
-Hello! I'm Ryan.
+Hello!
 Currently, I'm a programming officer at the Video Game Development Club at UCI (VGDC@UCI).
 Of course, I write games in Godot and Unity.
 Here are some notable things I have worked on.
@@ -47,11 +47,10 @@ The titles are links to where to most conveniently find the projects.
         A falling blocks puzzle game in Godot.
         This was a prototype I worked on by myself to pitch to VGDC@UCI. 
         </p> <p>
-        For code, this game was designed avoiding excessive objects,
+        For code, this game's design avoids excessive objects,
         an issue with
         <a href="https://github.com/kc34/tetris-attack-clone">an earlier project</a>
         I did with my brother many years ago.
-        
         Each block is an integer in an array. Each set of falling blocks is an object.
         Keeping it simple was perfect for this game,
         and even allowed me to create unit testing as I went.
@@ -81,7 +80,7 @@ The titles are links to where to most conveniently find the projects.
         An action adventure platformer game in Unity.
         I was a programmer, acting as a bit of a tech lead.
         </p> <p>
-        I experimented making my own physics for the player controller.
+        I experimented with making custom physics for the player controller.
         I built the camera system and a hitbox collision system.
         </p> <p>
         Unfortunately, our team decided not to submit our game to itch.io. 
