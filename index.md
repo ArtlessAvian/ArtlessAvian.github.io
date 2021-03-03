@@ -13,7 +13,7 @@ The titles are links to where to most conveniently find the projects.
 
 <div style="display:flex; margin-bottom:20px">
     <div>
-        <img class="hover-zoom" style="width: 50%; float: right" src="assets/images/LizardState-cropped.PNG">
+        <img class="hover-zoom" style="width: 50%; float: right" src="assets/images/LizardState-Cropped.PNG">
         <h2 id="lizard-state"> <!-- <a href=""> --> Lizard State <!-- </a> --> </h2>
         <p>
         A roguelike in Godot.
