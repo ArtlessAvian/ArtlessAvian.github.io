@@ -1,0 +1,13 @@
+name: Antsylvania
+repo: jaedan3/Castlevania-Fall-2019
+images:
+  - assets/images/Antsylvania-cropped.PNG
+  
+description: |
+  Antsylvania is an action adventure platformer game in Unity.
+  I was a programmer, acting as a bit of a tech lead.
+  
+  I experimented with making custom physics for the player controller.
+  I built the camera system and a hitbox collision system.
+  
+  Unfortunately, our team decided not to submit our game to itch.io.

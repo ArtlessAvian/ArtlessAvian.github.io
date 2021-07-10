@@ -1,0 +1,31 @@
+
+
+@media (max-width: 767px)
+{
+    .test-responsive {
+        box-shadow: 0px 0px 5px blue;
+    }
+
+    .click-images-prompt {
+        display: none;
+    }
+
+    .portfolio-top {
+        small * {
+            margin-left: 10px
+        }
+        small *:first-child {
+            margin-left: 0px
+        }
+    }
+
+    .portfolio-media {
+        max-width: 300px;
+        margin: 0 auto 0 auto;
+
+        img {
+            margin-top: 10px;
+            max-height: 400px;
+        }
+    }
+}

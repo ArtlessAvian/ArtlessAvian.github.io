@@ -1,0 +1,29 @@
+{% assign entry = site.data.portfolio[include.id] %}
+
+<div class="dashed"> </div>
+
+<div>
+    <h2 id="{{include.id}}" class="portfolio-top">
+        <div style="flex-grow: 100;">{{entry.name}}</div>
+        <small style="margin-top:auto">
+            {% if {{entry.link}} %}
+            <a style="white-space: nowrap;" href="{{entry.link}}">({{entry.link_label}})</a>
+            {% endif %}
+            {% if {{entry.repo}} %}
+            <a style="white-space: nowrap;" href="https://github.com/{{entry.repo}}">(Github Repo)</a>
+            {% endif %}
+        </small>
+    </h2>
+    <div class="portfolio-content">
+        <div class="portfolio-text">
+            {{entry.description | markdownify}}
+        </div>
+        <div class="portfolio-media">
+            {%- for image in entry.images -%}
+                <img src="{{image}}">
+            <!-- <img src="assets/images/LizState-2021-07.png"> -->
+            <!-- <img src="assets/images/LizardState-cropped.PNG"> -->
+            {%- endfor -%}
+        </div>
+    </div>
+</div>

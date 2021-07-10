@@ -1,0 +1,24 @@
+name: Lizard State
+repo: ArtlessAvian/lizard-state
+images:
+  - assets/images/LizState-2021-07.png
+  - assets/images/LizardState-cropped.PNG
+  
+description: |
+  Lizard State is a traditional roguelike in Godot.
+  It has animations, similar to the "Mystery Dungeon" series.
+  It has been my pet project over quarantine.
+
+  The focus of this project is its architecture. 
+  With lots of prototyping and changing plans, I've gone through many iterations trying to best design everything.
+  <!-- It feels Sisyphean to repeatedly design and scrap things, but with my effort, I now have a solid base to work on. -->
+
+  My current architecture is based on model-view-viewmodel.
+  It can be a bit cumbersome, but I'm liking it very much.
+
+  Between the current iteration, previous attempts, and external experiements,
+
+  * I've completely decoupled model and view, using an event queue to communicate between the two.
+  * I've implemented a vision and fog of war system.
+  * I've built an pathfinding AI to follow teammates and attack enemies.
+  * I've generated maps using cellular automata and perlin noise.

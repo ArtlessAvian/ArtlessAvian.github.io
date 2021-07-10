@@ -1,0 +1,31 @@
+name: Overload
+repo: artlessavian/overload
+link: https://artlessavian.itch.io/overload-super-unfinished
+link_label: Play on Itch
+images:
+  - assets/images/overload.gif
+  
+description: |
+  Overload is a falling blocks puzzle game in Godot.
+  This was a prototype I worked on by myself to pitch to VGDC@UCI. 
+
+  For code, this game's design avoids excessive objects,
+  an issue with
+  <a href="https://github.com/kc34/tetris-attack-clone">an earlier project</a>
+  I did with my brother many years before this project.
+  There, the board is represented as a 2D array of block objects.
+  Each block object was stateful.
+
+  Rather than have every block be an object, I kept it simple.
+  The board is represented by a jagged array of integers.
+  The number of extra objects is kept minimal.
+  For example, an entire column of falling blocks would be one object.
+  This approach was perfect for this game,
+  and it even allowed me to create unit tests and to apply test-driven development.
+
+  As is, it is an exact clone of the SNES game Tetris Attack.
+  <!-- I pitched the game to the game development club to get a team to help -->
+  <!-- declone the game. However, I didn't make much progress. -->
+  <!-- </p> <p> -->
+  <!-- Even so, on the management end it was a good learning experience. -->
+  <!-- I'd like to continue working on this. -->

@@ -1,0 +1,74 @@
+
+// @import "{{ site.theme }}";
+
+// @media print, screen and (min-width: 768px)
+// {
+//     // Heavily modified from https://stackoverflow.com/a/25036868
+
+//     .portfolio-entry {
+//         display: flex;
+//         flex-direction: row;
+//     }
+
+//     .portfolio-text {
+//     }
+
+//     // honestly, this could be stripped down, though i don't really know.
+//     .portfolio-media {
+//         padding: 10px; // Don't remember the best units for this.
+//         // width: 100%;
+//         max-width: 300px;
+//         // width: 300px;
+//         // float: right;
+//         order: 100; // place at right of flexbox
+
+//         img {        
+//             transition:transform 0.25s ease;
+//             max-width:300px !important;
+//             max-height:300px;
+//             object-fit: contain;
+//             transform-origin: right;
+//         }
+        
+//         img:active {
+//             -webkit-transform:scale(2);
+//             transform:scale(2);
+//             z-index: 5;
+//         }
+//     }
+
+//     // hide if theres a gallery
+//     .portfolio-media-gallery ~ .portfolio-media-main {
+//         display: none;
+//     }
+
+//     .button-hardcode {
+//         right: 222px !important;
+//     }
+// }
+
+// @media print, screen and (max-width: 767px) // magic number i guess
+// {
+//     .portfolio-entry {
+//         display: flex;
+//         flex-direction: column;
+//     }
+
+//     .portfolio-media {
+//         max-width: auto;
+//         text-align: center;
+
+//         img {
+//             object-fit: contain;
+//             max-height: 300px;
+//         }
+//     }
+
+//     .portfolio-media-main {
+//         order: -1;
+//     }
+
+//     .portfolio-media-gallery :first-child {
+//         display: none;
+//     }
+// }
