@@ -19,7 +19,7 @@ In highschool, I began using LibGDX,
 a game development framework in Java. This around when I started my Github account;
 many repositories of small games from that time still exist.
 Now I'm using Godot and Unity. (I'm also trying my best to learn Unreal.)
-Since I started college, I have part of the Video Game Development Club at UCI.
+Since I started college, I have been part of the Video Game Development Club at UCI.
 I am currently the programming director at the club!
 
 ### More
