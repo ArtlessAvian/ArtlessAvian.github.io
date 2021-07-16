@@ -1,8 +1,8 @@
 name: Lizard State
 repo: ArtlessAvian/lizard-state
 images:
-  - assets/images/LizState-2021-07.png
-  - assets/images/LizardState-cropped.PNG
+  - assets/images/LizState-2021-07.PNG
+  - assets/images/LizardState-Cropped.png
   
 description: |
   Lizard State is a traditional roguelike in Godot.
