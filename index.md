@@ -3,7 +3,7 @@ layout: home
 ---
 
 Hello! I'm Ryan, a fourth-year Computer Science major!
-Here are some game projects I have worked on.
+Here are some projects I have worked on. The first two are games, and the other three are applications.
 <span class="click-images-prompt"> You can click on images to expand them. </span>
 
 {% include portfolio-entry.html id = "lizard-state" %}

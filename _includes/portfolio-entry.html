@@ -6,10 +6,10 @@
     <div id="{{include.id}}" class="portfolio-top">
         <h2 style="flex-grow: 100;">{{entry.name}}</h2>
         {% if {{entry.link}} %}
-        <a style="white-space: nowrap;" href="{{entry.link}}">({{entry.link_label}})</a>
+        <a style="white-space: nowrap;" href="{{entry.link}}" target="_blank">({{entry.link_label}})</a>
         {% endif %}
         {% if {{entry.repo}} %}
-        <a style="white-space: nowrap;" href="https://github.com/{{entry.repo}}">(Github Repo)</a>
+        <a style="white-space: nowrap;" href="https://github.com/{{entry.repo}}" target="_blank">(Github Repo)</a>
         {% endif %}
     </div>
     <div class="portfolio-content">
