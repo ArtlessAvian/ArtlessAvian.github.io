@@ -2,13 +2,18 @@ name: Pokémon Team Builder
 repo: artlessavian/vgc-collapse
 link: https://artlessavian.github.io/vgc-collapse
 link_label: Run in Browser!
-images:
-  - assets/images/RogueSynthesis-cropped.PNG
-  
+videos:
+  - assets/images/vgc-collapse.mp4
+
+
 description: |
-  Rogue Synthesis is a turn based strategy game in Unity.
-  I was a programmer, volunteering to work on systems.
-  
-  I implemented pathfinding for a directional move system with weighted tiles.
-  I built a system to draw paths.
-  I designed a camera that can be smoothly panned both by player controls and by code.
+  "VGC Collapse" is a team building assistant running entirely in the browser.
+  It was created as a hackathon project!
+  I was the backend programmer, working on the algorithms and interfacing with the front end.
+
+  * I learned TypeScript in a weekend, so I could make a webapp while still taking advantage of static typing.
+  * I learned and implemented an arc consistency algorithm.
+  * I coordinated with my team to connect my logic to the frontend.
+
+  Funny enough, I was not too familiar with constraint satisfacation.
+  The game-dev world knows of it as "wavefunction collapse," and I knew of it from there instead.

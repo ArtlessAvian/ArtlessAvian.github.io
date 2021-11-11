@@ -19,8 +19,9 @@
         <div class="portfolio-media">
             {%- for image in entry.images -%}
                 <img src="{{image}}">
-            <!-- <img src="assets/images/LizState-2021-07.png"> -->
-            <!-- <img src="assets/images/LizardState-cropped.PNG"> -->
+            {%- endfor -%}
+            {%- for video in entry.videos -%}
+                <video controls autoplay><source src="{{video}}"></video>
             {%- endfor -%}
         </div>
     </div>
