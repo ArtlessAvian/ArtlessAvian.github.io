@@ -8,5 +8,10 @@ Here are some game projects I have worked on.
 
 {% include portfolio-entry.html id = "lizard-state" %}
 {% include portfolio-entry.html id = "overload" %}
+{% comment %}
 {% include portfolio-entry.html id = "antsylvania" %}
 {% include portfolio-entry.html id = "rogue-synthesis" %}
+{% endcomment %}
+{% include portfolio-entry.html id = "curved-space" %}
+{% include portfolio-entry.html id = "bridge-optimizer" %}
+{% include portfolio-entry.html id = "pokemon-csp" %}

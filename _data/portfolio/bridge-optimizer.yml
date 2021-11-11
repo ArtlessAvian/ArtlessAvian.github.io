@@ -1,0 +1,14 @@
+name: Pokémon Team Builder
+repo: artlessavian/vgc-collapse
+link: https://artlessavian.github.io/vgc-collapse
+link_label: Run in Browser!
+images:
+  - assets/images/RogueSynthesis-cropped.PNG
+  
+description: |
+  Rogue Synthesis is a turn based strategy game in Unity.
+  I was a programmer, volunteering to work on systems.
+  
+  I implemented pathfinding for a directional move system with weighted tiles.
+  I built a system to draw paths.
+  I designed a camera that can be smoothly panned both by player controls and by code.

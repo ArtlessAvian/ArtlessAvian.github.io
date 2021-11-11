@@ -3,17 +3,15 @@
 <div class="dashed"> </div>
 
 <div>
-    <h2 id="{{include.id}}" class="portfolio-top">
-        <div style="flex-grow: 100;">{{entry.name}}</div>
-        <small style="margin-top:auto">
-            {% if {{entry.link}} %}
-            <a style="white-space: nowrap;" href="{{entry.link}}">({{entry.link_label}})</a>
-            {% endif %}
-            {% if {{entry.repo}} %}
-            <a style="white-space: nowrap;" href="https://github.com/{{entry.repo}}">(Github Repo)</a>
-            {% endif %}
-        </small>
-    </h2>
+    <div id="{{include.id}}" class="portfolio-top">
+        <h2 style="flex-grow: 100;">{{entry.name}}</h2>
+        {% if {{entry.link}} %}
+        <a style="white-space: nowrap;" href="{{entry.link}}">({{entry.link_label}})</a>
+        {% endif %}
+        {% if {{entry.repo}} %}
+        <a style="white-space: nowrap;" href="https://github.com/{{entry.repo}}">(Github Repo)</a>
+        {% endif %}
+    </div>
     <div class="portfolio-content">
         <div class="portfolio-text">
             {{entry.description | markdownify}}
