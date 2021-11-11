@@ -16,6 +16,8 @@ repository: artlessavian/artlessavian.github.io
 
 # moonwalk stuff
 remote_theme: abhinavs/moonwalk
+plugins:
+  - jekyll-seo-tag
 
 theme_config:
   appearance: "dark" # can be "light", "dark" or "auto"
