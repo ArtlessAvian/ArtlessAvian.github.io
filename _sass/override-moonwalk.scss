@@ -1,0 +1,64 @@
+// formatting
+
+.w {
+    max-width: calc(1000px - 4em);
+    background-color: var(--bg)
+}
+
+.dashed {
+    // you call them dashed borders, despite the fact they are obviously dotted
+    border-top: 1px var(--text) dotted;
+    margin: 1em 0;
+}
+
+// colors
+// code from Moonwalk. -Ryan
+// colors from Base 16 Ocean. -Ryan
+
+.w {
+    --bg: #eff1f5;
+}
+
+html {
+    --bg: #e6e9f0;
+    --bg-secondary: #dfe1e8;
+    --headings: #a2bf8a;
+    --text: #4e5a67;
+    --links: #2245d1;
+    --highlight: #FFECB2; // light yellow
+    --code-text: #9D174D;
+    --share-text: #999;
+}
+
+// -------------- THEME SWITCHER -------------- //
+@mixin dark-appearance {
+
+    // colors from Base 16 Ocean Dark. -Ryan
+    .w {
+        --bg: #2b303b;
+    }
+
+    html,
+    body {
+        --bg: #232830;
+        --bg-secondary: #1c1f26;
+        --headings: #a2bf8a;
+        --text: #c0c5ce;
+        --links: #91A7FF;
+        --highlight: #41C7C7;
+        --code-text: #91A7FF;
+        --share-text: #C4C4C4;
+    }
+
+    ;
+}
+
+html[data-theme="dark"] {
+    @include dark-appearance;
+}
+
+@media (prefers-color-scheme: dark) {
+    body[data-theme="auto"] {
+        @include dark-appearance;
+    }
+}

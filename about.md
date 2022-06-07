@@ -4,7 +4,7 @@ title: About Me
 ---
 
 ## Computer Science Undergrad Writing Games
-<img style="float: right; width: 25%; margin:20px" src="assets/images/thats-me.jpg">
+<!-- <img style="float: right; width: 25%; margin:20px" src="assets/images/thats-me.jpg"> -->
 
 Hey! I'm Ryan Chang, a fourth-year at UCI.
 I'm majoring in Computer Science, specializing in Algorithms.

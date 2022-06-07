@@ -1,7 +1,4 @@
-
-
-@media (max-width: 767px)
-{
+@media (max-width: 1020px) {
     .test-responsive {
         box-shadow: 0px 0px 5px blue;
     }
@@ -14,17 +11,25 @@
         small * {
             margin-left: 10px
         }
+
         small *:first-child {
             margin-left: 0px
         }
     }
 
+    .portfolio-content {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
     .portfolio-media {
-        max-width: 300px;
+        // max-width: 500px;
         margin: 0 auto 0 auto;
 
-        img {
+        img,
+        video {
             margin-top: 10px;
+            width: 100%;
             max-height: 400px;
         }
     }

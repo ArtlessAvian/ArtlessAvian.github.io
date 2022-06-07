@@ -4,24 +4,31 @@
 
 <div>
     <div id="{{include.id}}" class="portfolio-top">
-        <h2 style="flex-grow: 100;">{{entry.name}}</h2>
-        {% if {{entry.link}} %}
-        <a style="white-space: nowrap;" href="{{entry.link}}" target="_blank">({{entry.link_label}})</a>
-        {% endif %}
-        {% if {{entry.repo}} %}
-        <a style="white-space: nowrap;" href="https://github.com/{{entry.repo}}" target="_blank">(Github Repo)</a>
-        {% endif %}
+        <h1 style="flex-grow: 100">{{entry.name}}</h1>
     </div>
     <div class="portfolio-content">
         <div class="portfolio-text">
             {{entry.description | markdownify}}
+
+            {% if {{entry.link}} %}
+            <a style="white-space: nowrap;" href="{{entry.link}}" target="_blank">({{entry.link_label}})</a>
+            {% if {{entry.repo}} %}
+            <br>
+            {% endif %}
+            {% endif %}
+            {% if {{entry.repo}} %}
+            <a style="white-space: nowrap;" href="https://github.com/{{entry.repo}}" target="_blank">(Github Repo)</a>
+            {% endif %}
+
         </div>
         <div class="portfolio-media">
             {%- for image in entry.images -%}
-                <img src="{{image}}">
+            <img src="{{image}}">
             {%- endfor -%}
             {%- for video in entry.videos -%}
-                <video controls autoplay><source src="{{video}}"></video>
+            <video controls>
+                <source src="{{video}}">
+            </video>
             {%- endfor -%}
         </div>
     </div>

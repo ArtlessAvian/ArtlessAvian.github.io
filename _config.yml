@@ -5,10 +5,11 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-title: Ryan Chang's Porfolio Site
+title: Ryan Chang (ArtlessAvian)
 email: artlessavian@gmail.com
 description:
-  This is my portfolio site
+  Personal website for ArtlessAvian.
+  Features Porfolio, About Me. 
 baseurl: ""
 url: "artlessavian.github.io"
 
