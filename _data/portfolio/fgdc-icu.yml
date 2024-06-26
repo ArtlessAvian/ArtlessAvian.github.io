@@ -1,0 +1,28 @@
+name: Fighting Game Development Club
+repo: ArtlessAvian/fgdc-at-icu
+link: https://artlessavian.itch.io/fighting-game-development-club-icu
+link_label: Play at itch.io
+images:
+  - assets/images/fgdc-css.png
+  - assets/images/fgdc-gameplay.png
+  
+description: |
+  FGDC is a fighting game featuring original characters from the Video Game Development Club at UCI.
+  It's the last project I made with the club before graduating, so I went all out.
+
+  The game also features rollback netcode!
+  A library handled the networking, but relied on its users (us, the developers) to serialize inputs and hash the state.
+  It worked well! Something I wish was within scope was some sort of automated testing to detect regressions.
+  After a desync issue was caught though, `git bisect` would usually be enough to find the cause.
+  
+  The main goal was keeping scope managable, with lots of room for stretch goals.
+  There's only two buttons, meaning six normals (standing, crouching, jumping) and two variants for each command.
+  This was enough for lots of design work, with no filler moves.
+  The animation emphasizes key poses. We wanted a paper aesthetic (a "paper prototype"), which lets us use those poses
+  and imply movement with flipping and spinning.
+  Under these constraints, we hit a lot of stretch goals, making four unique characters.
+
+  The "final" build is a little rough but has everything it needs for local play.
+  I planned to fix up loose ends wiht the project after graduating.
+  But I started working and got busy. Dang.
+  I'd still do it if I found a nice opportunity to.

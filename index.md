@@ -20,9 +20,7 @@ Below, I have a few of the games (and game related projects) I've made, with des
 <span class="click-images-prompt"> (You can click on images to expand them.) </span>
 
 {% include portfolio-entry.html id = "lizard-state" %}
-{% comment %}
 {% include portfolio-entry.html id = "fgdc-icu" %}
-{% endcomment %}
 {% include portfolio-entry.html id = "overload" %}
 {% include portfolio-entry.html id = "antsylvania" %}
 {% comment %}
